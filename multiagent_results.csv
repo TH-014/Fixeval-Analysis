@@ -1,0 +1,22 @@
+case_no,filename,submission_id,actual_verdict,predicted_verdict,primary_issue_line,confidence,iterations_used,analysis_time,generated_problem_title
+1,13.json,s343378870,Accepted,Runtime Error,27,0.95,1,137.06,Unknown Problem
+2,25.json,s039467446,Time Limit Exceeded,Time Limit Exceeded,25,0.95,1,130.7,Unknown Problem
+3,0.json,s016331694,Time Limit Exceeded,Time Limit Exceeded,14,0.95,1,111.34,Unknown Problem
+1,17.json,s969908929,Runtime Error,Runtime Error,23,0.95,1,104.8,Unknown Problem
+2,23.json,s667139558,Time Limit Exceeded,Time Limit Exceeded,20,0.95,2,206.48,Unknown Problem
+1,7.json,s022887755,Accepted,Time Limit Exceeded,14,0.95,2,214.68,Minimum Maximum Subarray Sum
+2,5.json,s161491802,Runtime Error,Runtime Error,25,0.95,2,235.55,Unknown Problem
+3,24.json,s617953869,Runtime Error,Accepted,0,0.5,1,183.95,Unknown Problem
+4,16.json,s519162712,Time Limit Exceeded,Accepted,0,0.5,1,156.49,Unknown Problem
+5,16.json,s720705546,Runtime Error,Runtime Error,50,0.95,3,358.28,Unknown Problem
+6,10.json,s528086810,Time Limit Exceeded,Time Limit Exceeded,9,0.95,1,126.73,Count Triplets with Sum S
+7,11.json,s632986103,Compile Error,Accepted,0,1.0,1,60.1,Unique Elements Check
+8,7.json,s479620508,Accepted,Time Limit Exceeded,45,0.95,1,135.11,Shell Sort Gap Sequence and Shift Count
+9,12.json,s603201567,Compile Error,Compile Error,8,0.95,1,121.14,Unknown Problem
+10,20.json,s584182218,Accepted,Accepted,0,0.5,1,174.96,Product Overflow Check
+11,7.json,s984656759,Accepted,Accepted,0,1.0,1,92.77,Word Occurrence Counter
+12,20.json,s156156000,Runtime Error,Time Limit Exceeded,12,1.0,1,190.89,Unknown Problem
+13,11.json,s868110032,Accepted,Accepted,0,0.5,1,151.04,Unknown Problem
+14,8.json,s636676606,Compile Error,Compile Error,9,0.95,3,205.19,Compare Two Numbers
+15,1.json,s269557588,Accepted,Time Limit Exceeded,14,0.95,1,117.59,Insertion Sort Step-by-Step Output
+16,22.json,s330892392,Memory Limit Exceeded,Time Limit Exceeded,7,0.95,1,62.69,Even Index String Construction

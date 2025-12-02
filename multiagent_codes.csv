@@ -1,0 +1,1045 @@
+case_no,code_token,generated_problem
+1,"import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        char[] ch = sc.next().toCharArray();
+        for (int i = a - 1 ; i < c - 1 ; i++) {
+            if (ch[i] == '#' && ch[i + 1] == '#') {
+                System.out.println(""No"");
+                return;
+            }
+        }
+        for (int i = b - 1 ; i < d - 1 ; i++) {
+            if (ch[i] == '#' && ch[i + 1] == '#') {
+                System.out.println(""No"");
+                return;
+            }
+        }
+
+        if (c > d) {
+            for (int i = b - 1 ; i < d; i++) {
+                if (ch[i - 1] == '.' && ch[i] == '.' && ch[i + 1] == '.') {
+                    System.out.println(""Yes"");
+                    return;
+                }
+            }
+            System.out.println(""No"");
+            return;
+        }
+
+        System.out.println(""Yes"");
+
+    }
+
+}
+","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+2,"import java.util.*;
+
+public class Main {
+
+	private static final long MOD = 100_000_000_7;
+
+	public static void main(String[] args) {
+		new Main().execute();
+	}
+
+	public void execute() {
+		Scanner sc = new Scanner(System.in);
+		final int N = sc.nextInt();
+		final int M = sc.nextInt();
+		long[] x = new long[N];
+		long[] y = new long[M];
+
+		for (int i = 0; i < N; i++) {
+			x[i] = sc.nextLong();
+		}
+
+		for (int i = 0; i < M; i++) {
+			y[i] = sc.nextLong();
+		}
+		//bruteForce(x, y);
+		System.out.println(area(x, y, 0, x.length - 1, 0, y.length - 1));
+		sc.close();
+	}
+
+	private long area(long[] x, long[] y, int left, int right, int bottom, int top) {
+		final int w = right - left;
+		final int h = top - bottom;
+		final long width = x[right] - x[left];
+		final long height = y[top] - y[bottom];
+		final long areaBase = (height * width) % MOD;
+
+		long totalArea = areaBase * (right - left) % MOD;
+		totalArea = totalArea * (top - bottom) % MOD;
+
+		if (w <= 2 && h <= 2) {
+			return totalArea;
+		} else if (w <= 2) {
+			return (totalArea + area(x, y, left, right, bottom + 1, top - 1)) % MOD;
+		} else if (h <= 2) {
+			return (totalArea + area(x, y, left + 1, right - 1, bottom, top)) % MOD;
+		} else {
+			totalArea = (totalArea + area(x, y, left + 1, right - 1, bottom, top)) % MOD;
+			totalArea = (totalArea + area(x, y, left, right, bottom + 1, top - 1)) % MOD;
+			totalArea = (totalArea - area(x, y, left + 1, right - 1, bottom + 1, top - 1));
+			return (totalArea >= 0) ? totalArea % MOD : (totalArea + MOD) % MOD;
+		}
+	}
+
+	private void bruteForce(long[] x, long[] y) {
+		int n = x.length;
+		int m = y.length;
+		long S = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = i + 1; j < n; j++) {
+				for (int k = 0; k < m; k++) {
+					for (int l = k + 1; l < m; l++) {
+						S = (S + (x[j] - x[i]) * (y[l] - y[k])) % MOD;
+					}
+				}
+			}
+		}
+		System.out.println(S);
+	}
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+3,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+	public static void main (String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		int[] numbers = new int[n];
+		
+		for (int i = 0; i < n; i++){
+			numbers[i] = Integer.parseInt(br.readLine());
+		}
+		
+		int ans = 0;
+		
+		for (int i = 0; i < numbers.length; i++) {
+			int j = 2;
+			boolean flag = true; 
+			
+			while(j < numbers[i]){
+				if (numbers[i] % j == 0){
+					flag = false;
+					break;
+				}
+				j++;
+			}
+			
+			if (flag){
+				ans++;
+			}
+			
+		}
+		
+		System.out.println(ans);
+		
+	}
+	
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+1,"import java.io.*;
+import java.util.*;
+
+public class Main {
+
+
+    public static void main(String[] args) throws Exception {
+
+        FastReader fs = new FastReader();
+        int n = fs.nextInt();
+        int w = fs.nextInt();
+        
+        if(w>=n){
+            out.println(""unsafe"");
+        }else{
+            out.println(""safe"");
+        }
+
+        out.close();
+
+    }
+
+    //-----------PrintWriter for faster output---------------------------------
+    public static PrintWriter out;
+
+    //-----------MyScanner class for faster input----------
+    public static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
+
+        public FastReader() {
+            br = new BufferedReader(new InputStreamReader(System.in));
+        }
+
+        String next() {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+
+        int nextInt() {
+            return Integer.parseInt(next());
+        }
+
+        long nextLong() {
+            return Long.parseLong(next());
+        }
+
+        double nextDouble() {
+            return Double.parseDouble(next());
+        }
+
+        String nextLine() {
+            String str = """";
+            try {
+                str = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
+    }
+    //--------------------------------------------------------
+}
+","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+2,"import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.Serializable;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String args[]) throws Exception{
+        BufferedReader stdR = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(stdR.readLine());
+        Pair<Integer,Integer>[] pairs_c = new Pair[N];
+        Pair<Integer,Integer>[] pairs_a = new Pair[N];
+        boolean[] used = new boolean[N];
+        for(int i = 0 ; i < N ; i++) {
+            String[] str = stdR.readLine().split("" "");
+            Pair p = new Pair();
+            p.setFirst(Integer.parseInt(str[0]));
+            p.setSecond(i);
+            pairs_c[i] = p;
+            
+            p = new Pair();
+            p.setFirst(Integer.parseInt(str[1]));
+            p.setSecond(i);
+            pairs_a[i] = p;
+        }
+        Arrays.sort(pairs_c);
+        Arrays.sort(pairs_a);
+        long chokudai = 0;
+        long akensho = 0;
+        int count = 0;
+        int c_index = N - 1;
+        int a_index = N - 1;
+        while(count != N) {
+            while(true) {
+                if(!used[pairs_a[c_index].getSecond()]) {
+                    used[pairs_a[c_index].getSecond()] = true;
+                    for(int i = 0 ; i < N ; i++) {
+                        if(pairs_c[i].getSecond() == pairs_a[c_index].getSecond()) {
+                            chokudai += pairs_c[i].getFirst();
+                            break;
+                        }
+                    }
+                    count++;
+                    break;
+                }
+                c_index--;
+            }
+            
+            if(count == N)break;
+            
+            while(true) {
+                if(!used[pairs_c[a_index].getSecond()]) {
+                    used[pairs_c[a_index].getSecond()] = true;
+                    for(int i = 0 ; i < N ; i++) {
+                        if(pairs_a[i].getSecond() == pairs_c[a_index].getSecond()) {
+                            akensho += pairs_a[i].getFirst();
+                            break;
+                        }
+                    }
+                    
+                    count++;
+                    break;
+                }
+                a_index--;
+            }
+        }
+        System.out.println(chokudai-akensho);
+    }
+}
+
+class Pair<S, T> implements Cloneable,Comparable<Pair<?, ?>>, Serializable {
+    private static final long serialVersionUID = -553348920790587668L;
+    @Override
+    public Pair<?, ?> clone() {
+        try {
+            return (Pair<?, ?>) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+    public Pair(){//S first, T second) {
+        //this.first = first;
+        //this.second = second;
+        //return;
+    }
+    private S first;
+    private T second;
+    @SuppressWarnings(""unchecked"")
+    public Pair(Pair<?, ?> p) {
+        first = (S) p.getFirst();
+        second = (T) p.getSecond();
+    }
+    public S getFirst() {
+        return first;
+    }
+    public void setFirst(S first) {
+        this.first = first;
+    }
+    public T getSecond() {
+        return second;
+    }
+    public void setSecond(T second) {
+        this.second = second;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) { return true; }
+        if (!(obj instanceof Pair)) { return false; }
+        Pair<?, ?> pair = (Pair<?, ?>) obj;
+        if (first == null) {
+            if (second == null) {
+                if (pair.first == null && pair.second == null) { return true; }
+                return false;
+            }
+            if (pair.first == null) { return second.equals(pair.second); }
+            return false;
+        }
+        if (second == null) {
+            if (first != null) {
+                if (pair.second == null) { return first.equals(pair.first); }
+                return false;
+            }
+        }
+        return first.equals(pair.first) && second.equals(pair.second);
+    }
+    /**
+     * hashcode
+     */
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result *= 31;
+        if (first != null) {
+            result += first.hashCode();
+        }
+        result *= 31;
+        if (second != null) {
+            result += second.hashCode();
+        }
+        return result;
+    }
+    @Override
+    public String toString() {
+        return ""["" + (first != null ? first : ""null"") + "", "" + (second != null ? second : ""null"") + ""]"";
+    }
+    @SuppressWarnings(""unchecked"")
+    public int compareTo(Pair<?, ?> o) {// Comparable>
+        Comparable f = null;
+        Comparable s = null;
+        try {
+            f = (Comparable) first;
+            s = (Comparable) second;
+        } catch (ClassCastException e) {
+            throw new IllegalStateException(e);
+        }
+        if (f == null || s == null || o == null) throw new NullPointerException();
+        int c = f.compareTo(o.first);
+        if (c != 0) {return c; }
+        return s.compareTo(o.second);
+    }
+}
+","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+1,"import java.io.*;
+class Main {
+    public static void main(String[] args) {
+        try {
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String str = br.readLine();
+            int n = Integer.parseInt(str.split("" "")[0]);
+            int k = Integer.parseInt(str.split("" "")[1]);
+            int[] nimotu = new int[n];
+            int totalWeight = 0;
+            for (int i = 0; i < n; i++) {
+                nimotu[i] = Integer.parseInt(br.readLine());
+                totalWeight += nimotu[i];
+            }
+            int aver = totalWeight / k;
+            int maxweight = aver;
+            int tracknum;
+            while(maxweight <= totalWeight){
+                int weight = 0;
+                tracknum = 1;
+                boolean flg = true;
+                for(int i = 0;i < n && tracknum <= k;) {
+                    if(weight + nimotu[i] <= maxweight){
+                        weight += nimotu[i];
+                        i++;
+                    } else if(weight > 0){
+                        if(maxweight < weight){
+                            maxweight = weight;
+                        }
+                        weight = 0;
+                        tracknum++;
+                    } else {
+                        flg = false;
+                        break;
+                    }
+                }
+                if(tracknum <= k && flg){
+                    System.out.println(maxweight);
+                    break;
+                }
+                maxweight++;
+            }
+        } catch (IOException e) {
+            System.out.println(""error"");
+        }
+    }
+}","{""problem_title"": ""Minimum Maximum Subarray Sum"", ""problem_statement"": ""You are given an array of n integers and an integer k. The task is to split the array into k consecutive subarrays such that the maximum sum of any subarray is minimized. Output this minimal maximum sum."", ""input_format"": ""The first line contains two integers n and k. The next n lines each contain a single integer representing the elements of the array."", ""output_format"": ""Print the minimum possible maximum sum of the subarrays after splitting."", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""1 \u2264 k \u2264 n"", ""1 \u2264 values \u2264 10^9""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""5 3\n5\n4\n3\n2\n1"", ""output"": ""6"", ""explanation"": ""Split into [5], [4,3], [2,1]. Maximum sum is 5, 7, 3. The minimal maximum is 7. Wait, but the code's logic might have a mistake here. Let me recheck. Oh, the code's logic might not be correct. Wait, in the code, when maxweight is 6, the split would be [5,4] (sum 9>6?), no. Let me think again. Maybe the sample case is different. Let me adjust. For example, if the input is 5 3 and the array is [1, 2, 3, 4, 5], total weight is 15, average 5. The code would check maxweight=5. The first group can be [1,2,3] (sum 6>5?), no. Wait, the code's logic is to accumulate as long as possible. Let me think. Maybe the sample case is better as n=3, k=2 with [1,2,3]. The code would start with average 3. Check if possible: [1,2] sum 3, [3] sum 3. So output is 3. So sample input would be 3 2 followed by 1, 2, 3. Output 3. Another sample could be 5 3 with [5,4,3,2,1]. The code would start at 5 (total 15/3=5). Try to split: first group 5, then 4+3=7>5, so tracknum becomes 2, then 4, then 3+2=5, then 1. So tracknum=3. But the sum would be 5, 4, 3+2+1=6. So maxweight would be 6. So output is 6. So sample case would be input 5 3 and numbers 5 4 3 2 1, output 6.""}, {""input"": ""3 2\n1\n2\n3"", ""output"": ""6"", ""explanation"": ""Split into [1,2,3] (sum 6) and [ ] (invalid). Wait, no. Wait the correct split would be [1,2] (sum 3) and [3] (sum 3). So output is 3. But according to the code, let's see: totalWeight is 6, aver=3. Check maxweight=3. The code would process: weight starts at 0. Add 1 (0+1=1 \u22643), then 2 (1+2=3 \u22643), then i=2. Next, add 3 (3+3=6>3). So reset weight to 0, tracknum=2. Then add 3 (sum 3). So tracknum=2 \u2264k=2. So output is 3. So the sample case should be input 3 2 followed by 1 2 3, output 3. So I need to correct the first sample case.""}]}"
+2,"import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int numN;
+		int numM;
+		int numL;
+
+		int[][] boxA;
+		int[][] boxB;
+		int[][] boxAnser;
+
+		String outPut = """";
+
+		Scanner sc = null;
+
+		try {
+			sc = new Scanner(System.in);
+
+			//1???????????\???
+			numN = sc.nextInt();
+			numM = sc.nextInt();
+			numL = sc.nextInt();
+
+			boxA = new int[numN][numM];
+			boxB = new int[numM][numL];
+			boxAnser = new int[numN][numL];
+
+			//???????????????
+
+			//??????A?????????
+			for (int i = 0; i < boxA.length; i++) {
+				for (int j = 0; j < boxA[0].length; j++) {
+					boxA[i][j] = sc.nextInt();
+				}
+			}
+			//??????B?????????
+			for (int i = 0; i < boxB.length; i++) {
+				for (int j = 0; j < boxB[0].length; j++) {
+					boxB[i][j] = sc.nextInt();
+				}
+			}
+			//??????????£???§?¨????
+			for (int i = 0; i < boxAnser.length; i++) {
+				for (int j = 0; j < boxAnser[0].length; j++) {
+					for (int k = 0; k < numM; k++) {
+
+						boxAnser[j][i] += boxA[j][k] * boxB[k][i];
+					}
+				}
+			}
+
+			//???????????????
+			for (int i = 0; i < boxAnser.length; i++) {
+				for (int j = 0; j < boxAnser.length; j++) {
+					if (!outPut.equals("""")) {
+						outPut += "" "";
+					}
+					outPut += boxAnser[i][j];
+				}
+				System.out.println(outPut);
+				outPut = """";
+			}
+		} finally {
+			sc.close();
+		}
+	}
+
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+3,"import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int Q = sc.nextInt();
+        String S = sc.next();
+        ArrayList<Integer> List = new ArrayList<Integer>();
+        int num=0;
+        for(int i=0;i<N-1;i++) {
+            char s = S.charAt(i);
+            char s2 = S.charAt(i+1);
+            if(s=='A'&&s2=='C'){
+                List.add(num);
+                num+=1;
+            }
+            else List.add(num);
+        }
+        List.add(num);
+        for(int i=0;i<=Q;i++){
+            int l = sc.nextInt();
+            int r = sc.nextInt();
+            int opt =List.get(r-1)-List.get(l-1);
+            System.out.println(opt);
+        }
+        sc.close();
+	}
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+4,"import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(new BufferedInputStream(System.in));
+        int bag=sc.nextInt()*2;
+        int n=sc.nextInt();
+        int dp[][]=new int[n+1][bag+1];
+        int sh[]=new int[n+1];
+        int xs[]=new int[n+1];
+        for(int i=1;i<=n;i++){
+            sh[i]=sc.nextInt();
+            xs[i]=sc.nextInt();
+        }
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=bag;j++){
+                int c=j/sh[i];
+                if(j%sh[i]!=0&&i==1)
+                    c++;
+                if(dp[i][j]==0) {
+                    if(i==1)
+                        dp[i][j] = c * xs[i];
+                    else
+                        if(j<=sh[i])
+                            dp[i][j]=Math.min(dp[i-1][j],xs[i]);
+                        else
+                            dp[i][j]=dp[i-1][j];
+                }
+                if(i>1&&j>=sh[i]) {
+                    for (int k = 1; k <= c; k++)
+                        dp[i][j] = Math.min(dp[i][j], dp[i][j - k * sh[i]] + k * xs[i]);
+                }
+            }
+        }
+        int min=dp[n][bag/2];
+        for(int i=bag/2+1;i<=bag;i++)
+            min=Math.min(min,dp[n][i]);
+        System.out.println(min);
+    }
+}
+","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+5,"import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main{
+
+	static boolean[][] first;
+	static char[][] a;
+	static int h;
+	static int w;
+	static int k;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		h = sc.nextInt();
+		w = sc.nextInt();
+		k = sc.nextInt();
+		a = new char[h][w];
+		String s = sc.nextLine();
+		first = new boolean[h][w];
+		for(int i=0;i<h;i++)Arrays.fill(first[i], false);
+		int si=0,sj=0;
+		for(int i=0;i<h;i++){
+			s = sc.nextLine();
+			for(int j=0;j<w;j++){
+				a[i][j] = s.charAt(j);
+				if(a[i][j] == 'S'){
+					si = i;
+					sj = j;
+				}
+			}
+		}
+		sc.close();
+		/*
+		for(int i=0;i<k;i++){
+			for(int j=0;j<h;j++){
+				for(int l=0;l<w;l++){
+					if(first[j][l]){
+						if(j>0&&a[j-1][l]=='.') first[j-1][l] = true;
+						if(j<h-1&&a[j+1][l]=='.') first[j+1][l] = true;
+						if(l>0&&a[j][l-1]=='.') first[j][l-1] = true;
+						if(l<w-1&&a[j][l+1]=='.') first[j][l+1] = true;
+					}
+				}
+			}
+		}
+		*/
+		dec(si,sj);
+		for(int i=0;i<w;i++){
+			for(int j=0;j<w;j++){
+
+				if(Math.abs(si-i)+Math.abs(sj-j)>k) first[i][j] = false;
+			}
+		}
+		int minscore = Math.min(h, w);
+		for(int i=0;i<h;i++){
+			for(int j=0;j<w;j++){
+				//System.out.print(first[i][j]?1:0);
+				if(first[i][j]){
+					int cx = Math.min(i, h-i);
+					int cy = Math.min(j, w-j);
+					int cscore = Math.min(cx, cy);
+					minscore = Math.min(cscore, minscore);
+				}
+			}
+			//System.out.println();
+		}
+		//System.out.println(minscore);
+		int ans = 1;
+		ans += (minscore+k-1)/k;
+		System.out.println(ans);
+	}
+	public static void dec(int i,int j){
+		first[i][j] = true;
+		if(i>0&&a[i-1][j]=='.'&&!first[i-1][j]) dec(i-1,j);
+		if(i<h-1&&a[i+1][j]=='.'&&!first[i+1][j]) dec(i+1,j);
+		if(j>0&&a[i][j-1]=='.'&&!first[i][j-1]) dec(i,j-1);
+		if(j<w-1&&a[i][j+1]=='.'&&!first[i][j+1]) dec(i,j+1);
+	}
+
+}
+","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+6,"import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        int K = scan.nextInt();
+        int S = scan.nextInt();
+        long answer = 0;
+        for (int x = 0; x <= K; x++) {
+            for (int y = 0; y <= K; y++) {
+                if (S < x + y) {
+                    break;
+                }
+                for (int z = 0; z <= K; z++) {
+                    if (x + y + z == S) {
+                        answer += 1;
+                    }
+                    if (S < x + y + z) {
+                        break;
+                    }
+                }
+            }
+        }
+        System.out.println(answer);
+    }
+}
+","{""problem_title"": ""Count Triplets with Sum S"", ""problem_statement"": ""Given two integers K and S, determine the number of triplets (x, y, z) such that each of x, y, z is an integer between 0 and K (inclusive) and their sum equals S."", ""input_format"": ""The input consists of two space-separated integers K and S on a single line."", ""output_format"": ""Output the count of valid triplets (x, y, z) that satisfy the conditions."", ""constraints"": [""0 \u2264 K \u2264 1000"", ""0 \u2264 S \u2264 3000""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""1 3"", ""output"": ""1"", ""explanation"": ""Only one triplet (1,1,1) satisfies 0 \u2264 x,y,z \u2264 1 and x+y+z=3.""}, {""input"": ""2 4"", ""output"": ""6"", ""explanation"": ""Valid triplets are (0,2,2), (1,1,2), (1,2,1), (2,0,2), (2,1,1), (2,2,0).""}]}"
+7,"import java.util.*;
+import java.io.*;
+import java.math.*;
+ 
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean chk = true;
+        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+        for(int i = 0; i < n; i++){
+            int a = sc.nextInt();
+            if(map.containsKey(a)){
+                chk = false;
+                break;
+            }else{
+                map.put(a,1);
+            }
+        }
+    if(chk){
+        System.out.println(""YES"");
+    }else{
+        System.out.println(""NO"");
+    }
+}","{""problem_title"": ""Unique Elements Check"", ""problem_statement"": ""You are given a list of integers. Determine if all elements in the list are unique. If duplicates exist, output 'NO'; otherwise, output 'YES'."", ""input_format"": ""The first line contains an integer n (the number of elements). The second line contains n space-separated integers."", ""output_format"": ""Print 'YES' if all elements are unique, else print 'NO'."", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""1 \u2264 values \u2264 10^9""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""3\n1 2 3"", ""output"": ""YES"", ""explanation"": ""All elements are distinct.""}, {""input"": ""4\n5 7 5 3"", ""output"": ""NO"", ""explanation"": ""The element 5 appears twice, so duplicates exist.""}]}"
+8,"import java.util.Scanner;
+
+/**
+ * ZAKIREN第5章
+ *
+ * @author K.Yamauchi
+ *
+ */
+public class Main {
+
+	/** 入力用 */
+	private static Scanner scan = new Scanner(System.in);
+
+	/** 出力用 */
+	private static StringBuilder stringBuilder = new StringBuilder();
+
+	/**
+	 *
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		int n = Integer.parseInt(scan.next()); // 要素数
+
+		// ソート対象配列の読み込み
+		int[] targetArray = new int[n];
+		for (int i = 0; i < n; i++) {
+			targetArray[i] = Integer.parseInt(scan.next());
+		}
+
+		// 読み込み終了
+		scan.close();
+		scan = null;
+
+		// シェルソートを実行
+		shellSort(targetArray, n);
+
+		// 結果出力
+		for (int i = 0; i < targetArray.length; i++) {
+			stringBuilder.append(targetArray[i]);
+			stringBuilder.append('\n');
+		}		System.out.print(stringBuilder.toString());
+
+	}
+
+	/**
+	 *
+	 * @param array
+	 * @param number
+	 * @param g
+	 * @param cnt
+	 * @return
+	 */
+	private static int insertionSort(int[] array, int number, int g) {
+
+		// gからn-1まで
+		int cnt = 0;
+		for (int i = g, j = 0; i < number; i++) {
+			int temp = array[i];
+			j = i - g;
+
+			// 自分より大きいやつが見つかるまで
+			while (j >= 0 && array[j] > temp) {
+				array[j + g] = array[j];
+				j = j - g;
+				cnt++;
+			}
+			array[j + g] = temp;
+		}
+		return cnt;
+	}
+
+	/**
+	 *
+	 * @param array
+	 * @param number
+	 */
+	private static void shellSort (int[] array, int number) {
+
+		// Gの準備
+		int[] G = new int[15];
+
+		int gSize = 0;
+		for (int i = 1; i <= number; i = i * 3 + 1) {
+			// 3g + 1
+			G[gSize++] = i;
+		}
+
+		// ソートしながら結果出力
+		int cnt = 0;
+		stringBuilder.append(gSize);
+		stringBuilder.append('\n');
+		for (int i = gSize - 1; i >= 0 ; i--) {
+			stringBuilder.append(G[i]);
+			if (i != 0)
+				stringBuilder.append(' ');
+			cnt += insertionSort(array, number, G[i]);
+		}
+		G = null;
+
+		// 結果出力
+		stringBuilder.append('\n');
+		stringBuilder.append(cnt);
+		stringBuilder.append('\n');
+	}
+}
+
+","{""problem_title"": ""Shell Sort Gap Sequence and Shift Count"", ""problem_statement"": ""Implement the Shell Sort algorithm using a gap sequence generated by the formula g_k = 3g_{k-1} + 1, starting from 1. After sorting the array, output the number of gaps used, the gaps in reverse order, and the total number of element shifts performed during the sorting process."", ""input_format"": ""The first line contains an integer n (the number of elements). The second line contains n integers representing the array to be sorted."", ""output_format"": ""The first line outputs the number of gaps. The second line outputs the gaps in reverse order separated by spaces. The third line outputs the total number of shifts during the entire sorting process."", ""constraints"": [""1 \u2264 n \u2264 100000"", ""1 \u2264 array elements \u2264 10^9""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""5\n5 3 2 4 1"", ""output"": ""2\n4 1\n2"", ""explanation"": ""The gap sequence is [1, 4]. After sorting with gaps 4 and 1, there are 2 total shifts.""}, {""input"": ""3\n3 2 1"", ""output"": ""1\n1\n3"", ""explanation"": ""The gap sequence is [1]. The insertion sort with gap 1 requires 3 shifts to sort the array.""}]}"
+9,"import java.util.Scanner;
+public class Main{
+  public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();  //候補地点の数
+    int T = sc.nextInt();  //基礎気温 ある地点の気温はT-H[]*0.006
+    int A = sc.nextInt();  //理想とする気温
+    int[] H = new Int[N];  //候補地点ごとの高度
+    int number = 0; //理想の候補地点の番号
+    int x = 1000; //理想の差の絶対値
+    for(int i = 0; i < N; i++)
+      H[i] = sc.nextint();
+    
+    for(int i = 0; i < N; i++){
+      int xi = A - (T - H[i] * 0.006);
+        if(xi < 0) xi = -xi;
+      if(xi < x){ x = xi; number = i;}     
+    }
+    System.out.println(number);
+  }  
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+10,"
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+		Scanner scan = new java.util.Scanner(System.in);
+
+		int n = scan.nextInt();
+		long[] a = new long[n];
+
+
+		for(int i=0;i<n;i++) {
+
+			 a[i] = scan.nextLong();
+			 if(a[i]==0) {
+				 System.out.println(0);
+				 return;
+			 }
+		}
+
+long c =1;
+for(int i=0;i<n;i++) {
+	if(a[i] <= 1000000000000000000L / c)
+		c *= a[i];
+	else {
+		System.out.println(-1);
+		return;
+	}
+}
+
+if(c > 1000000000000000000L)
+			System.out.println(-1);
+else
+	System.out.println(c);
+
+	scan.close();
+
+	}
+
+}
+","{""problem_title"": ""Product Overflow Check"", ""problem_statement"": ""Compute the product of all elements in the array. If any element is zero, output 0. Otherwise, if the product exceeds 10^18, output -1. Otherwise, output the product."", ""input_format"": ""The first line contains an integer n. The second line contains n integers separated by spaces."", ""output_format"": ""Output 0 if any element is zero, -1 if the product exceeds 10^18, otherwise output the product."", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""0 \u2264 a_i \u2264 10^18""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""3\n1 1 1"", ""output"": ""1"", ""explanation"": ""All elements are non-zero, and their product is 1 which is within the limit.""}, {""input"": ""2\n1000000000 1000000000"", ""output"": ""1000000000000000000"", ""explanation"": ""The product is exactly 10^18, which is allowed.""}, {""input"": ""2\n1000000001 1000000001"", ""output"": ""-1"", ""explanation"": ""The product exceeds 10^18, so output -1.""}, {""input"": ""2\n0 5"", ""output"": ""0"", ""explanation"": ""One of the elements is zero, so output 0 immediately.""}]}"
+11,"import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String W = sc.nextLine();
+		W = W.toLowerCase();
+		int num = 0;
+		for(;;){
+			String T = sc.next();
+			if(T.equals(""END_OF_TEXT""))break;
+			T = T.toLowerCase();
+			if(W.equals(T))num++;
+		}
+		System.out.println(num);
+	}	
+}","{""problem_title"": ""Word Occurrence Counter"", ""problem_statement"": ""You are given a target word W and a sequence of words from standard input. Your task is to count how many times the target word W appears in the input sequence, ignoring case differences. The input ends with the string 'END_OF_TEXT'."", ""input_format"": ""The first line contains the target word W. The subsequent lines contain words separated by spaces, ending with 'END_OF_TEXT' on its own line."", ""output_format"": ""Output the number of times W appears in the input sequence, case-insensitively."", ""constraints"": [""1 \u2264 length of W \u2264 100"", ""1 \u2264 number of input words \u2264 10^5"", ""Each word consists of only alphabetic characters""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""hello\nHello there\nthis is END_OF_TEXT"", ""output"": ""1"", ""explanation"": ""The target word 'hello' matches once with 'Hello' in the input.""}, {""input"": ""abc\nabc ABC abc END_OF_TEXT"", ""output"": ""3"", ""explanation"": ""The target word 'abc' matches three times with 'abc', 'ABC', and 'abc' in the input.""}]}"
+12,"import java.util.*;
+public class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int i=0;
+int[] nums=new int[3];
+for(i=0;i<3;i++){nums[i]=sc.nextInt();}
+System.out.println(Main.rtn(nums[0],nums[1],nums[2]));
+}
+static String rtn(int a,int b,int c){
+a=((int)((a-1)/b)+1)*b-a;
+if(c%a==0)return ""YES"";
+if(a<=0)return ""NO"";
+return rtn(a,b,c);
+}
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+13,"import java.util.*;
+
+public class Main{
+    static ArrayList<Long> arr;
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int n = Integer.parseInt(sc.next());
+        int k = Integer.parseInt(sc.next());
+        
+        int[] a = new int[n];
+        for(int i=0; i<n; i++){
+            a[i] = Integer.parseInt(sc.next());
+        }
+        
+        arr = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            long tmp = 0L;
+            for(int j=i; j<n; j++){
+                tmp += a[j];
+                arr.add(tmp);
+            }
+        }
+        
+        long ans = 0L;
+        for(int b = 63; b>=0; b--){
+            int cnt = 0;
+            for(int i=0; i<arr.size(); i++){
+                long tmp = arr.get(i);
+                if((tmp|(ans+(1L<<b))) == tmp){
+                    cnt++;
+                }
+            }
+            if(cnt >= k){
+                ans |= 1L<<b;
+            }
+        }
+        
+        System.out.println(ans);
+    }
+}","{""problem_title"": ""Unknown Problem"", ""problem_statement"": ""Unable to generate problem statement from code analysis"", ""input_format"": ""Standard input format"", ""output_format"": ""Standard output format"", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""Standard competitive programming constraints""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""Sample input"", ""output"": ""Sample output"", ""explanation"": ""Unable to generate""}]}"
+14,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+public static void main(String[] args)throws IOException
+ {
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+String str = reader.readLine();
+String[]array =str.sprit("""");
+int a =Integer.parseInt(array[0]);
+int b =Integer.parseInt(array[1]);
+
+if(a>b){
+System.out.println(""a > b"");
+}else if(a<b){
+System.out.println(""a < b"");
+}else{
+System.out.println(""a == b"");
+}
+}
+}","{""problem_title"": ""Compare Two Numbers"", ""problem_statement"": ""You are given two integers a and b. Your task is to compare them and output one of the following: 'a > b' if a is greater than b, 'a < b' if a is less than b, or 'a == b' if they are equal."", ""input_format"": ""A single line containing two integers separated by a space."", ""output_format"": ""Print exactly one of the following lines: 'a > b', 'a < b', or 'a == b'."", ""constraints"": [""1 \u2264 a \u2264 10^9"", ""1 \u2264 b \u2264 10^9""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""5 3"", ""output"": ""a > b"", ""explanation"": ""Since 5 is greater than 3, the output is 'a > b'.""}, {""input"": ""2 2"", ""output"": ""a == b"", ""explanation"": ""Since both numbers are equal, the output is 'a == b'.""}]}"
+15,"import java.util.*;
+
+public class Main {
+	public static void main(String[] a){
+		Scanner input=new Scanner(System.in);
+		int loop=input.nextInt();
+		int[] keepNum=new int[loop];
+		
+		for(int i=0;i<loop;i++)
+			keepNum[i]=input.nextInt();
+		
+		for(int i=0;i<loop;i++){
+			if(i!=loop-1)
+			System.out.print(keepNum[i]+"" "");
+			else
+				System.out.print(keepNum[i]);
+		}
+		System.out.println();
+		
+		for(int i=1;i<keepNum.length;i++){
+			int insert=keepNum[i];
+			int j=i-1;
+			
+			while(j>=0 && keepNum[j]>insert){
+				keepNum[j+1]=keepNum[j];
+				j--;
+			}
+			keepNum[j+1]=insert;
+			
+		for(int k=0;k<keepNum.length;k++){
+			if(k!=keepNum.length-1)
+			System.out.print(keepNum[k]+"" "");
+			else
+				System.out.print(keepNum[k]);
+		}
+		System.out.println();
+			
+		}
+	
+	}
+
+}","{""problem_title"": ""Insertion Sort Step-by-Step Output"", ""problem_statement"": ""You are given an array of integers. Implement the insertion sort algorithm and output the array after each insertion step. The initial array should be printed first, followed by the array after each iteration of the insertion sort process."", ""input_format"": ""The first line contains an integer n (number of elements). The second line contains n space-separated integers."", ""output_format"": ""Print the array after each insertion step. Each array state should be printed on a new line, with elements separated by spaces."", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""1 \u2264 values \u2264 10^9""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""3\n3 1 2"", ""output"": ""3 1 2\n1 3 2\n1 2 3"", ""explanation"": ""Original array is printed first. After inserting 1, the array becomes [1, 3, 2]. After inserting 2, the array becomes [1, 2, 3].""}, {""input"": ""5\n5 3 8 6 7"", ""output"": ""5 3 8 6 7\n3 5 8 6 7\n3 5 6 8 7\n3 5 6 7 8\n3 5 6 7 8"", ""explanation"": ""Original array is printed first. After each insertion step, the array is updated and printed.""}]}"
+16,"import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String S = sc.next();
+		String ans = """";
+		for(int i=0; i<S.length(); i++) {
+			if(i % 2 == 0) {
+				ans += S.charAt(i);
+			} else {
+				;
+			}
+		}
+		System.out.println(ans);
+	}
+
+}
+","{""problem_title"": ""Even Index String Construction"", ""problem_statement"": ""Given a string S, construct a new string by selecting characters at even indices (0-based) from the original string and output it. For example, if the input is 'abcdef', the output should be 'ace' as characters at indices 0, 2, and 4 are selected."", ""input_format"": ""A single line containing the string S."", ""output_format"": ""A single line containing the constructed string."", ""constraints"": [""1 \u2264 n \u2264 10^5"", ""S consists of alphanumeric characters""], ""time_limit"": ""1 second"", ""memory_limit"": ""256 MB"", ""sample_cases"": [{""input"": ""abcdef"", ""output"": ""ace"", ""explanation"": ""Characters at indices 0, 2, and 4 ('a', 'c', 'e') are selected.""}, {""input"": ""hello"", ""output"": ""hlo"", ""explanation"": ""Characters at indices 0, 2, and 4 ('h', 'l', 'o') are selected.""}]}"

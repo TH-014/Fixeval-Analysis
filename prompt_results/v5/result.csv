@@ -1,0 +1,96 @@
+filename,submission_id,actual_verdict,predicted_verdict,predicted_line_number
+2.json,s215703090,Compile Error,Runtime Error,48
+22.json,s079146988,Compile Error,Compile Error,5
+2.json,s659363632,Memory Limit Exceeded,Time Limit Exceeded,0
+5.json,s326007167,Runtime Error,Runtime Error,14
+10.json,s314101499,Runtime Error,Runtime Error,211
+11.json,s839000314,Accepted,Runtime Error,13
+18.json,s167405048,Time Limit Exceeded,Time Limit Exceeded,0
+7.json,s456054131,Time Limit Exceeded,Time Limit Exceeded,0
+19.json,s856163716,Accepted,Accepted,0
+23.json,s768769042,Runtime Error,Accepted,0
+1.json,s145738360,Memory Limit Exceeded,Memory Limit Exceeded,0
+3.json,s446681633,Accepted,Time Limit Exceeded,0
+3.json,s180842682,Compile Error,Accepted,0
+26.json,s285149236,Runtime Error,Runtime Error,29
+21.json,s285578874,Compile Error,Accepted,0
+26.json,s290247843,Time Limit Exceeded,Time Limit Exceeded,0
+20.json,s922036746,Accepted,Runtime Error,52
+22.json,s493646448,Time Limit Exceeded,Time Limit Exceeded,112
+23.json,s837936731,Accepted,Accepted,0
+26.json,s904535546,Runtime Error,Accepted,0
+20.json,s165580977,Compile Error,Runtime Error,0
+24.json,s221909160,Time Limit Exceeded,Time Limit Exceeded,0
+15.json,s516733735,Memory Limit Exceeded,Accepted,0
+2.json,s458497115,Time Limit Exceeded,Time Limit Exceeded,15
+14.json,s740218170,Compile Error,Time Limit Exceeded,0
+4.json,s853785826,Accepted,Accepted,0
+3.json,s699842467,Compile Error,Accepted,0
+5.json,s756332091,Memory Limit Exceeded,Accepted,0
+8.json,s173501645,Time Limit Exceeded,Time Limit Exceeded,9
+16.json,s411558240,Compile Error,Compile Error,9
+13.json,s102378025,Time Limit Exceeded,Time Limit Exceeded,30
+0.json,s321168730,Accepted,Runtime Error,58
+27.json,s661258953,Time Limit Exceeded,Time Limit Exceeded,15
+20.json,s249840305,Compile Error,Compile Error,19
+23.json,s103937626,Accepted,Accepted,0
+1.json,s137915574,Compile Error,Time Limit Exceeded,0
+21.json,s669867759,Time Limit Exceeded,Runtime Error,18
+26.json,s493434474,Runtime Error,Accepted,0
+10.json,s223193223,Memory Limit Exceeded,Runtime Error,44
+23.json,s378539527,Runtime Error,Memory Limit Exceeded,0
+1.json,s790303481,Memory Limit Exceeded,Time Limit Exceeded,71
+22.json,s432662915,Memory Limit Exceeded,Accepted,0
+21.json,s726610190,Compile Error,Accepted,0
+18.json,s210201112,Memory Limit Exceeded,Time Limit Exceeded,21
+5.json,s798767525,Time Limit Exceeded,Time Limit Exceeded,0
+27.json,s108057468,Compile Error,Accepted,0
+14.json,s854878669,Accepted,Runtime Error,17
+9.json,s089535307,Accepted,Accepted,0
+15.json,s502091734,Memory Limit Exceeded,Accepted,0
+18.json,s991910803,Memory Limit Exceeded,Accepted,0
+17.json,s022932394,Accepted,Accepted,0
+2.json,s429696095,Memory Limit Exceeded,Accepted,0
+8.json,s050143776,Runtime Error,Accepted,0
+10.json,s765160094,Runtime Error,Runtime Error,38
+23.json,s002936876,Memory Limit Exceeded,Time Limit Exceeded,0
+25.json,s234262653,Time Limit Exceeded,Memory Limit Exceeded,38
+5.json,s316951420,Runtime Error,Time Limit Exceeded,68
+13.json,s502000874,Memory Limit Exceeded,Time Limit Exceeded,21
+22.json,s456878207,Accepted,Accepted,0
+16.json,s708203748,Memory Limit Exceeded,Accepted,0
+21.json,s777345698,Compile Error,Accepted,0
+11.json,s872356089,Runtime Error,Memory Limit Exceeded,12
+23.json,s061753613,Time Limit Exceeded,Memory Limit Exceeded,16
+10.json,s651963532,Runtime Error,Memory Limit Exceeded,40
+16.json,s003374631,Time Limit Exceeded,Time Limit Exceeded,0
+10.json,s222344299,Accepted,Time Limit Exceeded,17
+17.json,s531868758,Compile Error,Compile Error,3
+15.json,s611260719,Time Limit Exceeded,Time Limit Exceeded,16
+20.json,s867903359,Memory Limit Exceeded,Accepted,0
+1.json,s302655999,Runtime Error,Accepted,0
+22.json,s159646305,Time Limit Exceeded,Time Limit Exceeded,0
+17.json,s333374112,Runtime Error,Time Limit Exceeded,9
+26.json,s177819349,Accepted,Time Limit Exceeded,0
+19.json,s547295733,Compile Error,Accepted,0
+24.json,s028955405,Memory Limit Exceeded,Accepted,0
+16.json,s712520943,Accepted,Accepted,0
+7.json,s508018884,Memory Limit Exceeded,Accepted,0
+4.json,s755150455,Time Limit Exceeded,Runtime Error,47
+19.json,s366414795,Compile Error,Compile Error,12
+6.json,s925492592,Runtime Error,Accepted,0
+15.json,s431479894,Runtime Error,Runtime Error,32
+21.json,s257677469,Time Limit Exceeded,Time Limit Exceeded,73
+21.json,s837551567,Memory Limit Exceeded,Memory Limit Exceeded,142
+16.json,s825345820,Accepted,Accepted,0
+12.json,s300006936,Time Limit Exceeded,Runtime Error,190
+24.json,s288237902,Memory Limit Exceeded,Time Limit Exceeded,0
+17.json,s724714873,Accepted,Accepted,0
+5.json,s240072636,Time Limit Exceeded,Time Limit Exceeded,0
+10.json,s116995537,Compile Error,Accepted,0
+10.json,s746010000,Accepted,Accepted,0
+26.json,s542554131,Runtime Error,Runtime Error,4
+12.json,s126470680,Memory Limit Exceeded,Runtime Error,63
+10.json,s500034097,Runtime Error,Accepted,0
+6.json,s920693185,Time Limit Exceeded,Time Limit Exceeded,0
+14.json,s288808269,Runtime Error,Memory Limit Exceeded,16

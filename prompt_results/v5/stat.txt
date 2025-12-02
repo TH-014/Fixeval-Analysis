@@ -1,0 +1,9 @@
+Total Accuracy: 38.83%
+
+| verdict               | accuracy   |   total |
+|:----------------------|:-----------|--------:|
+| Accepted              | 61.11%     |      18 |
+| Compile Error         | 29.41%     |      17 |
+| Memory Limit Exceeded | 10.00%     |      20 |
+| Runtime Error         | 31.58%     |      19 |
+| Time Limit Exceeded   | 76.19%     |      21 |

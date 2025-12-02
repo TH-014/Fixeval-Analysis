@@ -1,0 +1,7 @@
+| verdict               | accuracy   |   false positives |   false negatives |   total |
+|:----------------------|:-----------|------------------:|------------------:|--------:|
+| Accepted              | 57.14%     |                28 |                 3 |       7 |
+| Compile Error         | 45.45%     |                 3 |                 6 |      11 |
+| Memory Limit Exceeded | 0.00%      |                 0 |                11 |      11 |
+| Runtime Error         | 14.29%     |                 4 |                 6 |       7 |
+| Time Limit Exceeded   | 7.69%      |                 0 |                12 |      13 |

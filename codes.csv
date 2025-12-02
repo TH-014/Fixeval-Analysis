@@ -1,0 +1,2652 @@
+case_no,code_token
+1,"import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Maim {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		sc.close();
+		int[] p = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
+				43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		for(int i = 2; i <= N; i++) {
+			int t = i;
+			for(int k : p) {
+				if(t == 1) break;
+				while(t % k == 0) {
+					map.merge(k, 1, (v1, v2) -> v1 + v2);
+					t /= k;
+				}
+			}
+		}
+		int cnt = 0;
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		int d = 0;
+		int e = 0;
+		for(int k : map.keySet()) {
+			//System.out.println(k +"" "" + map.get(k));
+			int t = map.get(k);
+			if(t >= 74) {
+				a++;
+			}
+			if(t >= 24) {
+				b++;
+			}
+			if(t >= 14) {
+				c++;
+			}
+			if(t >= 4) {
+				d++;
+			}
+			if(t >= 2) {
+				e++;
+			}
+		}
+		//System.out.println(a);
+		cnt += a;
+		cnt += b * (e - 1);
+		cnt += c * (d - 1);
+		cnt += (d * (d - 1) * (e - 2)) / 2;
+		System.out.println(cnt);
+	}
+}"
+2,"import java.util.*;
+
+public class Main{
+	public static void main(String[] args){
+		int i,n,maxNo,maxCount,key;
+		Integer rst;
+		Scanner scan = new Scanner(System.in);
+
+		while(true){
+			HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+			if((n=scan.nextInt()) == 0) break;
+
+			for(i=maxCount=maxNo=0;i<n;i++){
+				key = scan.nextInt();
+				rst = hm.get(key);
+
+				if(rst == null) hm.put(key,1);
+				else{
+					rst++;	
+					hm.put(key,rst);
+					if(maxCount < rst){
+						maxCount = rst;
+						maxNo = key;
+					}
+				}
+			}
+
+			if(maxCount > n/2) System.out.println(maxNo);
+			else System.out.println(""NO COLOR"");
+		}
+	}
+}"
+1,"package aoj;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String sa = scan.next();
+        String sb = scan.next();
+        int a = new Integer(sa);
+        int b = new Integer(sb);
+        
+        String result=compare(a,b);
+        System.out.println(result);
+    }
+    
+    public static String compare(int a, int b){
+        String result = """";
+        if(a>b) result = ""a > b"";
+        if(a<b) result = ""a < b"";
+        if(a==b) result = ""a == b"";
+        return result;
+    }
+    
+}"
+1,"package begin20200404;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+
+		long totalNum = 0;
+
+		ArrayList<Integer> numListN = new ArrayList<Integer>();
+		ArrayList<Integer> numListM = new ArrayList<Integer>();
+//		System.out.println(numListN);
+
+		for(int i = 1;i <= N;i++) {
+			int num = sc.nextInt();
+			numListN.add(num);
+			totalNum += num;
+		}
+		sc.close();
+
+		//最大値の取得
+		for(int j = 0;j < M; j++) {
+			int max = 0;
+			int maxLocation = 0;
+			for(int i = 0;i < numListN.size(); i++) {
+				if(max < numListN.get(i)) {
+					max = numListN.get(i);
+					maxLocation = i;
+				}
+			}
+			if(max != 0) {
+				numListM.add(max);
+				numListN.remove(maxLocation);
+			}
+		}
+
+//		System.out.println(numListM);
+
+		String answer = ""Yes"";
+		for(int j = 0;j < M; j++) {
+			if(numListM.get(j) < (totalNum/(4*M))) {
+//				System.out.println(numListM.get(j));
+				answer = ""No"";
+			}
+		}
+//		System.out.println(totalNum);
+		System.out.println(answer);
+	}
+
+}
+"
+2,"
+import java.io.*;
+import java.math.*;
+import java.util.*;
+
+import static java.util.Arrays.*;
+
+public class Main {
+	private static final int mod = (int)1e9+7;
+
+	final Random random = new Random(0);
+	final IOFast io = new IOFast();
+
+	/// MAIN CODE
+	public void run() throws IOException {
+//		int TEST_CASE = Integer.parseInt(new String(io.nextLine()).trim());
+		int TEST_CASE = 1;
+		while(TEST_CASE-- != 0) {
+			Patricia p = new Patricia();
+			int n = io.nextInt();
+			char[][] cs = new char[n][];
+			for(int i = 0; i < n; i++) {
+				p.add(cs[i] = io.next());
+			}
+			
+			int[] prefix = new int[n];
+			int[][][] cnt = new int[n][26][26];
+			for(int i = 0; i < n; i++) {
+				Patricia cur = p;
+				for(int j = 0; j < cs[i].length; ) {
+					final int idx = Patricia.toIndex(cs[i][j]);
+					for(int k = 0; k < Patricia.ALPHABET_SIZE; k++) {
+						if(k != idx && cur.next[k] != null) {
+							cnt[i][k][idx] += cur.next[k].cnt;
+						}
+					}
+					cur = cur.next[Patricia.toIndex(cs[i][j])];
+					j += cur.str.length;
+					prefix[i] += cur.countTerminate();
+//					dump(i, j, cur.str);
+				}
+			}
+			
+			int q = io.nextInt();
+			for(int t = 0; t < q; t++) {
+				int k = io.nextInt() - 1;
+				char[] ps = io.next();
+				int ans = prefix[k];
+				for(int i = 0; i < ps.length; i++) {
+					for(int j = i + 1; j < ps.length; j++) {
+						ans += cnt[k][Patricia.toIndex(ps[i])][Patricia.toIndex(ps[j])];
+					}
+				}
+				io.out.println(ans);
+			}
+		}
+	}
+	
+	static
+	public class Patricia {
+		static int gid;
+		static final int ALPHABET_SIZE = 26;
+		
+		final int id;
+		int cnt;
+		char[] str;
+		Patricia[] next = new Patricia[ALPHABET_SIZE];
+		
+		public static int toIndex(char c) {
+			return c - 'a';
+		}
+		
+		public Patricia() {
+			id = gid++;
+			str = new char[0];
+		}
+		
+		private Patricia(char[] cs, int start, int len) {
+			str = Arrays.copyOfRange(cs, start, start + len);
+			id = gid++;
+		}
+		
+		public void add(char[] cs) {
+			Patricia cur = this;
+			cur.cnt++;
+			if(cs.length == 0) return;
+			for(int i = 0, j = 0; i < cs.length; ) {
+				Patricia next = cur.next[toIndex(cs[j])];
+				if(next == null) {
+					cur.next[toIndex(cs[j])] = new Patricia(cs, j, cs.length - j);
+					cur.next[toIndex(cs[j])].cnt++;
+					return;
+				}
+				for(; ; i++) {
+					if(i - j >= next.str.length) {
+						break;
+					}
+					if(i >= cs.length || next.str[i - j] != cs[i]) {
+						cur.next[toIndex(cs[j])] = next = next.split(i - j);
+						break;
+					}
+				}
+				j = i;
+				next.cnt++;
+				cur = next;
+			}
+		}
+		
+		private Patricia split(int len) {
+			Patricia parent = new Patricia(str, 0, len);
+			str = Arrays.copyOfRange(str, len, str.length);
+			parent.next[toIndex(str[0])] = this;
+			parent.cnt = this.cnt;
+			return parent;
+		}
+		
+		public int countTerminate() {
+			int cnt = this.cnt;
+			for(int i = 0; i < next.length; i++) {
+				if(next[i] != null) {
+					cnt -= next[i].cnt;
+				}
+			}
+			return cnt;
+		}
+		
+		public boolean find(char[] cs) {
+			Patricia cur = this;
+			int j = 0;
+			for(int i = 0; i < cs.length; i++, j++) {
+				if(i - j >= cur.str.length) {
+					cur = cur.next[toIndex(cs[i])];
+					if(cur == null) return false;
+					j = 0;
+				}
+				if(cur.str[j] != cs[i]) {
+					return false;
+				}
+			}
+			if(j != cur.str.length) {
+				return false;
+			}
+			return cur.countTerminate() != 0;
+		}
+		
+		public void dump() {
+			dump("""");
+		}
+		
+		public void dump(String indent) {
+			Main.dump(indent, new String(str), cnt);
+			for(int i = 0; i < next.length; i++) {
+				if(next[i] != null) {
+					next[i].dump(indent + ""  "");
+				}
+			}
+		}
+	}
+	
+	/// TEMPLATE
+	static int gcd(int n, int r) { return r == 0 ? n : gcd(r, n%r); }
+	static long gcd(long n, long r) { return r == 0 ? n : gcd(r, n%r); }
+	
+	static <T> void swap(T[] x, int i, int j) { T t = x[i]; x[i] = x[j]; x[j] = t; }
+	static void swap(int[] x, int i, int j) { int t = x[i]; x[i] = x[j]; x[j] = t; }
+
+	void printArrayLn(int[] xs) { for(int i = 0; i < xs.length; i++) io.out.print(xs[i] + (i==xs.length-1?""\n"":"" "")); }
+	void printArrayLn(long[] xs) { for(int i = 0; i < xs.length; i++) io.out.print(xs[i] + (i==xs.length-1?""\n"":"" "")); }
+	
+	static void dump(Object... o) { System.err.println(Arrays.deepToString(o)); } 
+	
+	void main() throws IOException {
+		//		IOFast.setFileIO(""rle-size.in"", ""rle-size.out"");
+		try { run(); }
+		catch (EndOfFileRuntimeException e) { }
+		io.out.flush();
+	}
+	public static void main(String[] args) throws IOException { new Main().main(); }
+	
+	static class EndOfFileRuntimeException extends RuntimeException {
+		private static final long serialVersionUID = -8565341110209207657L; }
+
+	static
+	public class IOFast {
+		private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		private PrintWriter out = new PrintWriter(System.out);
+
+		void setFileIn(String ins) throws IOException { in.close(); in = new BufferedReader(new FileReader(ins)); }
+		void setFileOut(String outs) throws IOException { out.flush(); out.close(); out = new PrintWriter(new FileWriter(outs)); }
+		void setFileIO(String ins, String outs) throws IOException { setFileIn(ins); setFileOut(outs); }
+
+		private static int pos, readLen;
+		private static final char[] buffer = new char[1024 * 8];
+		private static char[] str = new char[500*8*2];
+		private static boolean[] isDigit = new boolean[256];
+		private static boolean[] isSpace = new boolean[256];
+		private static boolean[] isLineSep = new boolean[256];
+
+		static { for(int i = 0; i < 10; i++) { isDigit['0' + i] = true; } isDigit['-'] = true; isSpace[' '] = isSpace['\r'] = isSpace['\n'] = isSpace['\t'] = true; isLineSep['\r'] = isLineSep['\n'] = true; }
+		public int read() throws IOException { if(pos >= readLen) { pos = 0; readLen = in.read(buffer); if(readLen <= 0) { throw new EndOfFileRuntimeException(); } } return buffer[pos++]; }
+		public int nextInt() throws IOException { int len = 0; str[len++] = nextChar(); len = reads(len, isSpace); int i = 0; int ret = 0; if(str[0] == '-') { i = 1; } for(; i < len; i++) ret = ret * 10 + str[i] - '0'; if(str[0] == '-') { ret = -ret; } return ret; }
+		public long nextLong() throws IOException { int len = 0; str[len++] = nextChar(); len = reads(len, isSpace); int i = 0; long ret = 0; if(str[0] == '-') { i = 1; } for(; i < len; i++) ret = ret * 10 + str[i] - '0'; if(str[0] == '-') { ret = -ret; } return ret; }
+		public char nextChar() throws IOException { while(true) { final int c = read(); if(!isSpace[c]) { return (char)c; } } }
+		int reads(int len, boolean[] accept) throws IOException { try { while(true) { final int c = read(); if(accept[c]) { break; } if(str.length == len) { char[] rep = new char[str.length * 3 / 2]; System.arraycopy(str, 0, rep, 0, str.length); str = rep; } str[len++] = (char)c; } } catch(EndOfFileRuntimeException e) { ; } return len; }
+		int reads(char[] cs, int len, boolean[] accept) throws IOException { try { while(true) { final int c = read(); if(accept[c]) { break; } cs[len++] = (char)c; } } catch(EndOfFileRuntimeException e) { ; } return len; }
+		public char[] nextLine() throws IOException { int len = 0; str[len++] = nextChar(); len = reads(len, isLineSep); try { if(str[len-1] == '\r') { len--; read(); } } catch(EndOfFileRuntimeException e) { ; } return Arrays.copyOf(str, len); }
+		public String nextString() throws IOException { return new String(next()); }
+		public char[] next() throws IOException { int len = 0; str[len++] = nextChar(); len = reads(len, isSpace); return Arrays.copyOf(str, len); }
+//		public int next(char[] cs) throws IOException { int len = 0; cs[len++] = nextChar(); len = reads(cs, len, isSpace); return len; }
+		public double nextDouble() throws IOException { return Double.parseDouble(nextString()); }
+		public long[] nextLongArray(final int n) throws IOException { final long[] res = new long[n]; for(int i = 0; i < n; i++) { res[i] = nextLong(); } return res; }
+		public int[] nextIntArray(final int n) throws IOException { final int[] res = new int[n]; for(int i = 0; i < n; i++) { res[i] = nextInt(); } return res; }
+		public int[][] nextIntArray2D(final int n, final int k) throws IOException { final int[][] res = new int[n][]; for(int i = 0; i < n; i++) { res[i] = nextIntArray(k); } return res; }
+		public int[][] nextIntArray2DWithIndex(final int n, final int k) throws IOException { final int[][] res = new int[n][k+1]; for(int i = 0; i < n; i++) { for(int j = 0; j < k; j++) { res[i][j] = nextInt(); } res[i][k] = i; } return res; }
+		public double[] nextDoubleArray(final int n) throws IOException { final double[] res = new double[n]; for(int i = 0; i < n; i++) { res[i] = nextDouble(); } return res; }
+	}
+}
+"
+3,"import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner scan = new Scanner(System.in);
+
+int n = scan.nextInt();
+int[] a = new int[n];
+for(int j = 0;j<n;j++){
+a[j]= scan.nextInt();}
+for(int i = j-1;i>=0;i--){
+if(i>0){System.out.println(a[i] + "" "");
+}
+else{System.out.print(a[0]);}
+}}"
+4,"import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		long N = sc.nextLong();
+		long [] A = new long [5];
+		long min = (long) Math.pow(10, 15);
+		for (int i=0;i<5;i++) {
+			A[i] = sc.nextInt();
+			min = Math.min(A[i], min);
+		}
+		long result = N/min + 5;
+		System.out.println(result);
+	}
+}	
+"
+5,"import java.math.*;
+import java.util.*;
+import java.util.function.*;
+ 
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int[] A = new int[N];
+    Map<Integer, Integer> fA[] = new Map[N];
+    Map<Integer, Integer> lcm = new HashMap<>();
+    for (int i = 0; i < N; i++) {
+      A[i] = sc.nextInt();
+      fA[i] = f(A[i]);
+      for (Map.Entry<Integer, Integer> a : fA[i].entrySet())
+        lcm.put(a.getKey(), Math.max(lcm.getOrDefault(a.getKey(), 0), a.getValue()));
+    }
+    sc.close();
+
+    long mod = 1000000007;
+    long ans = 0;
+    for (Map<Integer, Integer> f : fA) {
+      long bi = 1;
+      for (Map.Entry<Integer, Integer> lcm_p : lcm.entrySet()) {
+        int b = lcm_p.getKey();
+        int e = lcm_p.getValue() - f.getOrDefault(lcm_p.getKey(), 0);
+        for (int i = 0; i < e; i++) {
+          bi *= b;
+          bi %= mod;
+        }
+      }
+      ans += bi;
+      ans %= mod;
+    }
+    System.out.println(ans);
+  }
+
+  private static Map<Integer, Integer> f(int n) {
+    Map<Integer, Integer> f = new HashMap<>();
+    int m = n;
+    int s = SIEVE[m - 1];
+    while (s != 0) {
+      f.put(s, f.getOrDefault(s, 0) + 1);
+      m /= s;
+      s = SIEVE[m - 1];
+    }
+    return f;
+  }
+
+  private static int[] SIEVE = sieve(1000000);
+
+  private static int[] sieve(int n) {
+    int [] sieve = new int[n];
+    for (int i = 2; i <= n; i += 2) sieve[i - 1] = 2;
+    int sqrt = (int) Math.sqrt(n);
+    for (int i = 3; i <= n; i += 2) {
+      if (sieve[i - 1] == 0) sieve[i - 1] = i;
+      if (i <= sqrt)
+        for (int j = i * i; j <= n; j += i)
+          if (sieve[j - 1] == 0) sieve[j - 1] = i;
+    }
+    return sieve;
+  }
+}"
+6,"import java.util.Scanner;
+class Main{
+    int r;
+    double A = 0,B = 0,C = 3.141592653589;
+    public void solve(){
+        Scanner sc = new Scanner(System.in);
+        r = sc.nextInt();
+        if(r > 0){
+        A = 1.0 * r * r * C;
+        B = 1.0 * 2.0 * r * C;
+        }
+    }
+    public void outputtt(){
+        System.out.printf(""%3.6f %3.6f %n"",A,B);
+    }
+    public static void main(String[] args){
+        new Main().solve();
+        new Main().outputtt();
+
+    }
+}"
+7,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // 標準入力
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(isr);
+            String strArr[] = br.readLine().split("" "");
+            int n = Integer.parseInt(strArr[0]);
+            int k = Integer.parseInt(strArr[1]);
+            ArrayList<Integer> ans = new ArrayList<Integer>();
+            for (int i = 0; i < n; i++) {
+                strArr = br.readLine().split("" "");
+                int num = Integer.parseInt(strArr[0]);
+                int count = Integer.parseInt(strArr[1]);
+                for (int j = 0; j < count; j++) {
+                    ans.add(num);
+                }
+            }
+            Collections.sort(ans);
+            Collections.reverse(ans);
+            System.out.println(ans.get(k));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}"
+8,"import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.Closeable;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.TreeMap;
+
+public class Main {
+	static ContestScanner in;static Writer out;public static void main(String[] args)
+	{try{in=new ContestScanner();out=new Writer();Main solve=new Main();solve.solve();
+	in.close();out.flush();out.close();}catch(IOException e){e.printStackTrace();}}
+	static void dump(int[]a){for(int i=0;i<a.length;i++)out.print(a[i]+"" "");out.println();}
+	static void dump(int[]a,int n){for(int i=0;i<a.length;i++)out.printf(""%""+n+""d "",a[i]);out.println();}
+	static void dump(long[]a){for(int i=0;i<a.length;i++)out.print(a[i]+"" "");out.println();}
+	static void dump(char[]a){for(int i=0;i<a.length;i++)out.print(a[i]);out.println();}
+	static long pow(long a,int n){long r=1;while(n>0){if((n&1)==1)r*=a;a*=a;n>>=1;}return r;}
+	static String itob(int a,int l){return String.format(""%""+l+""s"",Integer.toBinaryString(a)).replace(' ','0');}
+	static void sort(int[]a){m_sort(a,0,a.length,new int[a.length]);}
+	static void sort(int[]a,int l){m_sort(a,0,l,new int[l]);}
+	static void sort(int[]a,int l,int[]buf){m_sort(a,0,l,buf);}
+	static void sort(int[]a,int s,int l,int[]buf){m_sort(a,s,l,buf);}
+	static void m_sort(int[]a,int s,int sz,int[]b)
+	{if(sz<7){for(int i=s;i<s+sz;i++)for(int j=i;j>s&&a[j-1]>a[j];j--)swap(a, j, j-1);return;}
+	m_sort(a,s,sz/2,b);m_sort(a,s+sz/2,sz-sz/2,b);int idx=s;int l=s,r=s+sz/2;final int le=s+sz/2,re=s+sz;
+	while(l<le&&r<re){if(a[l]>a[r])b[idx++]=a[r++];else b[idx++]=a[l++];}
+	while(r<re)b[idx++]=a[r++];while(l<le)b[idx++]=a[l++];for(int i=s;i<s+sz;i++)a[i]=b[i];
+	} /* qsort(3.5s)<<msort(9.5s)<<<shuffle+qsort(17s)<Arrays.sort(Integer)(20s) */
+	static void sort(long[]a){m_sort(a,0,a.length,new long[a.length]);}
+	static void sort(long[]a,int l){m_sort(a,0,l,new long[l]);}
+	static void sort(long[]a,int l,long[]buf){m_sort(a,0,l,buf);}
+	static void sort(long[]a,int s,int l,long[]buf){m_sort(a,s,l,buf);}
+	static void m_sort(long[]a,int s,int sz,long[]b)
+	{if(sz<7){for(int i=s;i<s+sz;i++)for(int j=i;j>s&&a[j-1]>a[j];j--)swap(a, j, j-1);return;}
+	m_sort(a,s,sz/2,b);m_sort(a,s+sz/2,sz-sz/2,b);int idx=s;int l=s,r=s+sz/2;final int le=s+sz/2,re=s+sz;
+	while(l<le&&r<re){if(a[l]>a[r])b[idx++]=a[r++];else b[idx++]=a[l++];}
+	while(r<re)b[idx++]=a[r++];while(l<le)b[idx++]=a[l++];for(int i=s;i<s+sz;i++)a[i]=b[i];}
+	static void swap(long[] a,int i,int j){final long t=a[i];a[i]=a[j];a[j]=t;}
+	static void swap(int[] a,int i,int j){final int t=a[i];a[i]=a[j];a[j]=t;}
+	static int binarySearchSmallerMax(int[]a,int v)// get maximum index which a[idx]<=v
+	{int l=-1,r=a.length-1,s=0;while(l<=r){int m=(l+r)/2;if(a[m]>v)r=m-1;else{l=m+1;s=m;}}return s;}
+	static int binarySearchSmallerMax(int[]a,int v,int l,int r)
+	{int s=-1;while(l<=r){int m=(l+r)/2;if(a[m]>v)r=m-1;else{l=m+1;s=m;}}return s;}
+	static List<Integer>[]createGraph(int n)
+    {List<Integer>[]g=new List[n];for(int i=0;i<n;i++)g[i]=new ArrayList<>();return g;}
+	void solve() throws NumberFormatException, IOException{
+		final int n = in.nextInt();
+		final int m = in.nextInt();
+		int f = in.nextInt();
+		List<Edge>[] node = new List[n];
+		for(int i=0; i<n; i++) node[i] = new ArrayList<>();
+		for(int i=0; i<m; i++){
+			int a = in.nextInt();
+			int b = in.nextInt();
+			int c = in.nextInt();
+			int d = in.nextInt();
+			Edge e = new Edge(b, c, d);
+			Edge r = new Edge(a, 0, -d);
+			e.rev = r;
+			r.rev = e;
+			node[a].add(e);
+			node[b].add(r);
+		}
+		final int s = 0, t = n-1;
+		int[] h = new int[n];
+		int[] dist = new int[n];
+		int[] preV = new int[n];
+		int[] preE = new int[n];
+		final int inf = Integer.MAX_VALUE;
+		PriorityQueue<Pos> qu = new PriorityQueue<>();
+		int res = 0;
+		while(f>0){
+			Arrays.fill(dist, inf);
+			dist[s] = 0;
+			qu.clear();
+			qu.add(new Pos(s, 0));
+			while(!qu.isEmpty()){
+				Pos p = qu.poll();
+				if(dist[p.v]<p.d) continue;
+				dist[p.v] = p.d;
+				final int sz = node[p.v].size();
+				for(int i=0; i<sz; i++){
+					Edge e = node[p.v].get(i);
+					final int nd = e.cost+p.d + h[p.v]-h[e.to];
+					if(e.cap>0 && nd < dist[e.to]){
+						preV[e.to] = p.v;
+						preE[e.to] = i;
+						qu.add(new Pos(e.to, nd));
+					}
+				}
+			}
+			if(dist[t]==inf) break;
+			for(int i=0; i<n; i++) h[i] += dist[i];
+			int minf = f;
+			for(int i=t; i!=s; i=preV[i]){
+				minf = Math.min(minf, node[preV[i]].get(preE[i]).cap);
+			}
+			f -= minf;
+			res += minf*h[t];
+			for(int i=t; i!=s; i=preV[i]){
+				node[preV[i]].get(preE[i]).cap -= minf;
+				node[preV[i]].get(preE[i]).rev.cap += minf;
+			}
+		}
+		System.out.println(res);
+	}
+}
+class Pos implements Comparable<Pos>{
+	int v, d;
+	public Pos(int v, int d) {
+		this.v = v;
+		this.d = d;
+	}
+	@Override
+	public int compareTo(Pos o) {
+		return d-o.d;
+	}
+}
+
+class Edge{
+	int to, cap, cost;
+	Edge rev;
+	Edge(int t, int c, int co){
+		to = t;
+		cap = c;
+		cost = co;
+	}
+	void rev(Edge r){
+		rev = r;
+	}
+}
+
+
+class MultiSet<T> extends HashMap<T, Integer>{
+	@Override public Integer get(Object key){return containsKey(key)?super.get(key):0;}
+	public void add(T key,int v){put(key,get(key)+v);}
+	public void add(T key){put(key,get(key)+1);}
+	public void sub(T key){final int v=get(key);if(v==1)remove(key);else put(key,v-1);}
+	public MultiSet<T> merge(MultiSet<T> set)
+	{MultiSet<T>s,l;if(this.size()<set.size()){s=this;l=set;}else{s=set;l=this;}
+	for(Entry<T,Integer>e:s.entrySet())l.add(e.getKey(),e.getValue());return l;}
+}
+class OrderedMultiSet<T> extends TreeMap<T, Integer>{
+	@Override public Integer get(Object key){return containsKey(key)?super.get(key):0;}
+	public void add(T key,int v){put(key,get(key)+v);}
+	public void add(T key){put(key,get(key)+1);}
+	public void sub(T key){final int v=get(key);if(v==1)remove(key);else put(key,v-1);}
+	public OrderedMultiSet<T> merge(OrderedMultiSet<T> set)
+	{OrderedMultiSet<T>s,l;if(this.size()<set.size()){s=this;l=set;}else{s=set;l=this;}
+	while(!s.isEmpty()){l.add(s.firstEntry().getKey(),s.pollFirstEntry().getValue());}return l;}
+}
+class Pair implements Comparable<Pair>{
+	int a,b;final int hash;Pair(int a,int b){this.a=a;this.b=b;hash=(a<<16|a>>16)^b;}
+	public boolean equals(Object obj){Pair o=(Pair)(obj);return a==o.a&&b==o.b;}
+	public int hashCode(){return hash;}
+	public int compareTo(Pair o){if(a!=o.a)return a<o.a?-1:1;else if(b!=o.b)return b<o.b?-1:1;return 0;}
+}
+class Timer{
+	long time;public void set(){time=System.currentTimeMillis();}
+	public long stop(){return time=System.currentTimeMillis()-time;}
+	public void print(){System.out.println(""Time: ""+(System.currentTimeMillis()-time)+""ms"");}
+	@Override public String toString(){return""Time: ""+time+""ms"";}
+}
+class Writer extends PrintWriter{
+	public Writer(String filename)throws IOException
+	{super(new BufferedWriter(new FileWriter(filename)));}
+	public Writer()throws IOException{super(System.out);}
+}
+class ContestScanner implements Closeable{
+	private BufferedReader in;private int c=-2;
+	public ContestScanner()throws IOException 
+	{in=new BufferedReader(new InputStreamReader(System.in));}
+	public ContestScanner(String filename)throws IOException
+	{in=new BufferedReader(new InputStreamReader(new FileInputStream(filename)));}
+	public String nextToken()throws IOException {
+		StringBuilder sb=new StringBuilder();
+		while((c=in.read())!=-1&&Character.isWhitespace(c));
+		while(c!=-1&&!Character.isWhitespace(c)){sb.append((char)c);c=in.read();}
+		return sb.toString();
+	}
+	public String readLine()throws IOException{
+		StringBuilder sb=new StringBuilder();if(c==-2)c=in.read();
+		while(c!=-1&&c!='\n'&&c!='\r'){sb.append((char)c);c=in.read();}
+		return sb.toString();
+	}
+	public long nextLong()throws IOException,NumberFormatException
+	{return Long.parseLong(nextToken());}
+	public int nextInt()throws NumberFormatException,IOException
+	{return(int)nextLong();}
+	public double nextDouble()throws NumberFormatException,IOException 
+	{return Double.parseDouble(nextToken());}
+	public void close() throws IOException {in.close();}
+}"
+9,"import java.util.*;
+import java.io.*;
+//fastest
+class Main{
+  static List dummy;
+
+  public static void main(String args[])throws Exception{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    init();
+    int i;
+    String s;
+    int key = 0;
+    for(i = n ; i>0; i--){
+      StringTokenizer token = new StringTokenizer(br.readLine());
+      s = token.nextToken();
+      if(s.length()<=6)key= Integer.parseInt(token.nextToken());
+      if(s.charAt(0)=='i'){
+        insert(key);
+      }else if(s.length()>6){
+        if(s.charAt(6)=='F' ){
+          deleteFirst();
+        }else if(s.charAt(6)=='L'){
+          deleteLast();
+        }
+      }else{
+        delete(key);
+      }
+    }
+    Print_list();
+  }
+  static void init(){
+    dummy = new List();
+    dummy.next=dummy;
+    dummy.previous=dummy;
+  }
+  //insert
+  static void insert(int n){
+    List list = new List(n);
+    list.next=dummy.next;
+    dummy.next.previous=list;
+    dummy.next=list;
+    list.previous=dummy;
+  }
+  //ノードの削除メソッド
+  static void deleteNode(List delete){
+    if( delete == dummy)return;
+    delete.previous.next=delete.next;
+    delete.next.previous=delete.previous;
+  }
+  //指定したノードの削除
+  static void delete(int n){
+    deleteNode(listSearch(n));
+  }
+  //firstnode削除
+  static void deleteFirst(){
+    deleteNode(dummy.next);
+  }
+  //lastnode削除
+  static void deleteLast(){
+    deleteNode(dummy.previous);
+  }
+  //keyを使ってノードを探索
+  static List listSearch(int n){
+    List cur = dummy.next;
+    while(cur.data!=n && cur!=dummy){
+      cur = cur.next;
+    }
+    return cur;
+  }
+  //printメソッド
+  static void Print_list(){
+    List list = dummy.next;
+    if(list != dummy){
+      System.out.printf(""%d"",list.data);
+      list = list.next;
+    }
+    while(list!=dummy){
+      System.out.printf("" %d"",list.data);
+      list = list.next;
+    }
+    System.out.println();
+  }
+}
+//listの構造体的役割
+class List{
+  public int data;
+  public List next;
+  public List previous;
+
+  public List(){}
+    public List(int n){
+      this.data = n;
+    }
+  }
+
+"
+10,"import java.io.OutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.io.UncheckedIOException;
+import java.util.List;
+import java.util.stream.Stream;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.util.function.IntFunction;
+
+/**
+ * Built using CHelper plug-in
+ * Actual solution is at the top
+ *
+ * @author mikit
+ */
+public class Main {
+    public static void main(String[] args) {
+        InputStream inputStream = System.in;
+        OutputStream outputStream = System.out;
+        LightScanner in = new LightScanner(inputStream);
+        PrintWriter out = new PrintWriter(outputStream);
+        DPeopleOnALine solver = new DPeopleOnALine();
+        solver.solve(1, in, out);
+        out.close();
+    }
+
+    static class DPeopleOnALine {
+        private static final String YES = ""Yes"";
+        private static final String NO = ""No"";
+
+        public void solve(int testNumber, LightScanner in, PrintWriter out) {
+            int n = in.ints(), m = in.ints();
+            int[] l = new int[m], r = new int[m], d = new int[m];
+            ShortestPathSolver solver = ShortestPathSolver.Algorithm.WARSHALL_FLOYD.getInstance(n);
+            for (int i = 0; i < m; i++) {
+                l[i] = in.ints() - 1;
+                r[i] = in.ints() - 1;
+                d[i] = in.ints();
+                solver.addEdge(l[i], r[i], d[i]);
+            }
+            for (int i = 0; i < m; i++) {
+                if (solver.shortestPath(l[i], r[i]) != d[i] || solver.shortestPath(r[i], l[i]) < Integer.MAX_VALUE) {
+                    out.println(NO);
+                    return;
+                }
+            }
+            out.println(YES);
+        }
+
+    }
+
+    static class BellmanFord implements ShortestPathSolver {
+        int nodes;
+        List<BellmanFord.Edge> edges;
+        long[] distance;
+
+        public BellmanFord(int n) {
+            nodes = n;
+            edges = new ArrayList<>();
+            distance = new long[n];
+        }
+
+        public void addEdge(int from, int to, int cost) {
+            edges.add(new BellmanFord.Edge(from, to, cost));
+        }
+
+        public long shortestPath(int src, int dst) {
+            Arrays.fill(distance, Long.MAX_VALUE);
+            distance[src] = 0;
+            for (int i = 0; i < 2 * nodes; i++) {
+                for (BellmanFord.Edge e : edges) {
+                    if (distance[e.from] < Long.MAX_VALUE && distance[e.to] > distance[e.from] + e.cost) {
+                        distance[e.to] = distance[e.from] + e.cost;
+                        if (i == nodes - 1 && e.to == dst) {
+                            throw new RuntimeException(""negative loop"");
+                        }
+                    }
+                }
+            }
+            return distance[dst];
+        }
+
+        private static class Edge {
+            int from;
+            int to;
+            long cost;
+
+            Edge(int from, int to, long cost) {
+                this.from = from;
+                this.to = to;
+                this.cost = cost;
+            }
+
+        }
+
+    }
+
+    static class LightScanner {
+        private BufferedReader reader = null;
+        private StringTokenizer tokenizer = null;
+
+        public LightScanner(InputStream in) {
+            reader = new BufferedReader(new InputStreamReader(in));
+        }
+
+        public String string() {
+            if (tokenizer == null || !tokenizer.hasMoreTokens()) {
+                try {
+                    tokenizer = new StringTokenizer(reader.readLine());
+                } catch (IOException e) {
+                    throw new UncheckedIOException(e);
+                }
+            }
+            return tokenizer.nextToken();
+        }
+
+        public int ints() {
+            return Integer.parseInt(string());
+        }
+
+    }
+
+    static class WarshallFloyd implements ShortestPathSolver {
+        private static final int INF = 0x2fffffff;
+        private int[][] graph;
+        private boolean calculated = false;
+
+        public WarshallFloyd(int n) {
+            graph = new int[n][n];
+            Arrays.stream(graph).forEach(a -> Arrays.fill(a, INF));
+        }
+
+        public void addEdge(int from, int to, int cost) {
+            graph[from][to] = cost;
+        }
+
+        public long shortestPath(int src, int dst) {
+            if (!calculated) {
+                for (int i = 0; i < graph.length; i++) {
+                    for (int j = 0; j < graph.length; j++) {
+                        for (int k = 0; k < graph.length; k++) {
+                            graph[j][k] = Math.min(graph[j][k], graph[j][i] + graph[i][k]);
+                        }
+                    }
+                }
+                calculated = true;
+            }
+            return graph[src][dst] == INF ? Integer.MAX_VALUE : graph[src][dst];
+        }
+
+    }
+
+    static interface ShortestPathSolver {
+        void addEdge(int from, int to, int cost);
+
+        long shortestPath(int src, int dst);
+
+        enum Algorithm {
+            WARSHALL_FLOYD(WarshallFloyd::new),
+            BELLMAN_FORD(BellmanFord::new),
+            DIJKSTRA(null),
+            ;
+            private final IntFunction<ShortestPathSolver> constructor;
+
+            Algorithm(IntFunction<ShortestPathSolver> constructor) {
+                this.constructor = constructor;
+            }
+
+            public ShortestPathSolver getInstance(int nodes) {
+                return constructor.apply(nodes);
+            }
+
+        }
+
+    }
+}
+
+"
+11,"import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		BufferedReader r = new BufferedReader(new InputStreamReader(System.in));		
+		try {
+			int A_size;
+			
+			while(true){
+				/* input from here */
+				String line = r.readLine();
+				A_size = Integer.parseInt(line);
+				long[] A = new long[A_size];
+				if(A_size==0){
+					break;
+				} else if(A_size==1){
+					line = r.readLine();
+					System.out.println(line);
+					continue;
+				} else {				
+					String[] temp = r.readLine().split("" "");
+					for(int i=0;i<A_size;i++){
+						A[i] = Long.parseLong(temp[i]);
+					}
+				}
+				/* input till here */
+				/* processing from here */
+				Arrays.sort(A);
+				
+				/* processing till here */
+				/* output */
+				
+				boolean nosol = true;
+				int count = 1;
+				for(int i=0;i<A_size-1;i++){
+					if(A[i]==A[i+1]){
+						count++;
+						if(count>A_size/2){
+							System.out.println(A[i]);
+							nosol = false;
+							break;
+						}
+					} else {
+						count = 1;
+						if(i>A_size/2){
+							break;
+						}
+					}					
+				}
+				if(nosol){
+					System.out.println(""NO COLOR"");
+				}		
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}"
+12,"import java.util.*;
+public class Main {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+        int mod = 0;
+        for(int i=0;i<s.length();i++){int a = string.ValueOf(s.charAt(i));
+                                      mod+=a;
+                                      mod%=9;
+                            }
+        
+		if(mod==0){System.out.println(""Yes"");}
+      else{System.out.println(""No"");}
+	}
+}
+"
+13,"import java.io.*;
+public class  {
+public static void main(String[] args) {
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+try {
+System.out.println(""数字を入力してください。"");
+String line = reader.readline();
+int a = Integer.parseInt(line);
+int b = Integer.paeseInt(line);
+if(a < b){
+  System.out.println(""a < b"");
+}else if(a = b){
+  System.out.println(""a = b"");
+}else{
+  System.out.println(""a > b"");
+}catch(IOException e) {
+System.out.println(e);
+} catch (NumberFormatException e) {
+System.out.println(""数字の形式が正しくありません。"");
+}
+}
+}
+"
+14,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    /**
+     * @param args
+     * @throws IOException
+     * @throws NumberFormatException
+     */
+    public static void main(String[] args) throws NumberFormatException,
+            IOException {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(
+                System.in));
+
+        int len = Integer.parseInt(reader.readLine());
+        
+        int[] arr = new int[len];
+
+        String line;
+        
+        for (int i = 0; i < len; i++) {
+            line = reader.readLine();
+            arr[i] = Integer.parseInt(line);
+        }
+        
+       int resultCount = 0; 
+       for (int j = 0; j < arr.length; j++) {
+           if(isPrime(arr[j])){
+               resultCount ++;
+           }
+       }
+       
+       System.out.println(resultCount);
+
+    }
+
+    private static boolean isPrime(int value) {
+        int count = 0;
+        for (int i = 2; i < value; i++) {
+            if(value % i == 0){
+                count ++;
+            }
+        }
+        return count == 0;
+    }
+    
+    
+
+}"
+15,"import java.util.*;
+
+public class Main{
+
+    public static void main(String args[]){
+
+        // スキャナーの宣言
+        Scanner sc = new Scanner(System.in);
+        // 整数の入力
+		int r = sc.nextInt();
+        // スペース区切りの整数の入力
+        int g = sc.nextInt();
+        int b = sc.nextInt();
+        int n = sc.nextInt();
+        int ans = 0;
+        //for文
+        for(int i = 0; i < n / r + 1; i++){
+            for(int j = 0; j < (n - (i * r)) / g + 1; j++){
+                if((n - (i * r + j * g)) % b == 0){
+                    ans++;
+                }
+                /*for(int k = 0; k < (n - (i * r + j * g)) / b + 1; k++){
+                    if(i * r + j * g + k * b == n){
+                        ans++;
+                        break;
+                    }
+                }*/
+            }
+        }
+        // 出力
+        System.out.println(ans);
+
+    }
+
+}"
+16,"import java.io.OutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.SortedSet;
+import java.util.Set;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.TreeSet;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.util.Comparator;
+import java.io.InputStream;
+
+/**
+ * Built using CHelper plug-in
+ * Actual solution is at the top
+ */
+public class Main {
+	public static void main(String[] args) {
+		InputStream inputStream = System.in;
+		OutputStream outputStream = System.out;
+		FastScanner in = new FastScanner(inputStream);
+		PrintWriter out = new PrintWriter(outputStream);
+		TaskC solver = new TaskC();
+		solver.solve(1, in, out);
+		out.close();
+	}
+
+	static class TaskC {
+		long sum;
+
+		public void solve(int testNumber, FastScanner in, PrintWriter out) {
+			int x = in.nextInt();
+			int y = in.nextInt();
+			int z = in.nextInt();
+			int n = x + y + z;
+			int[] a = new int[n];
+			int[] b = new int[n];
+			int[] c = new int[n];
+			for (int i = 0; i < n; i++) {
+				a[i] = in.nextInt();
+				b[i] = in.nextInt();
+				c[i] = in.nextInt();
+			}
+
+			SortedSet<Integer> ab = new TreeSet<>(diffComparator(a, b));
+			SortedSet<Integer> ac = new TreeSet<>(diffComparator(a, c));
+			SortedSet<Integer> ba = new TreeSet<>(diffComparator(b, a));
+			SortedSet<Integer> bc = new TreeSet<>(diffComparator(b, c));
+			SortedSet<Integer> ca = new TreeSet<>(diffComparator(c, a));
+			SortedSet<Integer> cb = new TreeSet<>(diffComparator(c, b));
+
+			sum = 0;
+			for (int i = 0; i < n; i++) {
+				if (i < x) {
+					sum += a[i];
+					ab.add(i);
+					ac.add(i);
+				} else if (i < x + y) {
+					sum += b[i];
+					ba.add(i);
+					bc.add(i);
+				} else {
+					sum += c[i];
+					ca.add(i);
+					cb.add(i);
+				}
+			}
+
+			while (true) {
+				if (move2(ab, ba, ac, bc, a, b)) continue;
+				if (move2(ac, ca, ab, cb, a, c)) continue;
+				if (move2(bc, cb, ba, ca, b, c)) continue;
+
+				if (move3(ab, ac, bc, ba, ca, cb, a, b, c)) continue;
+				if (move3(ac, ab, cb, ca, ba, bc, a, c, b)) continue;
+
+				break;
+			}
+
+			out.println(sum);
+		}
+
+		private Comparator<Integer> diffComparator(int[] a, int[] b) {
+			return (i, j) -> {
+				int u = a[i] - b[i];
+				int v = a[j] - b[j];
+				if (u != v) {
+					return u < v ? -1 : 1;
+				}
+				if (!i.equals(j)) {
+					return i < j ? -1 : 1;
+				}
+				return 0;
+			};
+		}
+
+		private boolean move2(SortedSet<Integer> ab, SortedSet<Integer> ba, SortedSet<Integer> ac, SortedSet<Integer> bc, int[] a, int[] b) {
+			int i = ab.first();
+			int j = ba.first();
+			long add = (long) -a[i] + b[i] - b[j] + a[j];
+			if (add > 0) {
+				ab.remove(i);
+				ac.remove(i);
+				ab.add(j);
+				ac.add(j);
+				ba.remove(j);
+				bc.remove(j);
+				ba.add(i);
+				bc.add(i);
+				sum += add;
+				return true;
+			}
+			return false;
+		}
+
+		private boolean move3(SortedSet<Integer> ab, SortedSet<Integer> ac, SortedSet<Integer> bc, SortedSet<Integer> ba, SortedSet<Integer> ca, SortedSet<Integer> cb, int[] a, int[] b, int[] c) {
+			int i = ab.first();
+			int j = bc.first();
+			int k = ca.first();
+			long add = (long) -a[i] + b[i] - b[j] + c[j] - c[k] + a[k];
+			if (add > 0) {
+				ab.remove(i);
+				ac.remove(i);
+				ab.add(k);
+				ac.add(k);
+				ba.remove(j);
+				bc.remove(j);
+				ba.add(i);
+				bc.add(i);
+				ca.remove(k);
+				cb.remove(k);
+				ca.add(j);
+				cb.add(j);
+				sum += add;
+				return true;
+			}
+			return false;
+		}
+
+	}
+
+	static class FastScanner {
+		private BufferedReader in;
+		private StringTokenizer st;
+
+		public FastScanner(InputStream stream) {
+			in = new BufferedReader(new InputStreamReader(stream));
+		}
+
+		public String next() {
+			while (st == null || !st.hasMoreTokens()) {
+				try {
+					st = new StringTokenizer(in.readLine());
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+			}
+			return st.nextToken();
+		}
+
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+	}
+}
+
+"
+17,"import java.io.PrintStream;
+import java.util.Scanner;
+
+import library.common.Predef;
+
+public class Main {
+    static final PrintStream so = System.out;
+    static final Scanner sc = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        int N = ni();
+        int[] A = new int[N];
+        for (int i = 0; i < N; i++) {
+            A[i] = ni();
+        }
+        
+        int idx = -1;
+        int minGCD = Integer.MAX_VALUE;
+        
+        for (int i = 0; i < N; i++) {
+            int nextI = (i == N-1) ? 0 : i+1;
+            int GCDi = gcd(A[i], A[nextI]);
+            if (GCDi < minGCD) {
+                minGCD = GCDi;
+                idx = i;
+            }
+        }
+
+        int[] copy1 = A.clone();
+        copy1[idx] = 0;
+        int[] copy2 = A.clone();
+        copy2[idx == N-1 ? 0 : idx+1] = 0;
+        
+        so.println(Math.max(gcd(copy1), gcd(copy2)));
+    }
+    
+    static int gcd(int[] a) {
+        int ans = 0;
+        for (int i = 0; i < a.length; i++) {
+            int nextI = i == a.length-1 ? 0 : i+1;
+            int GCDi = gcd(a[i], a[nextI]);
+            ans = gcd(ans, GCDi);
+        }
+        return ans;
+    }
+    
+    static int gcd(int m, int n) {
+        if(m < n) return gcd(n, m);
+        if(n == 0) return m;
+        return gcd(n, m % n);
+    }
+        
+       
+    static int ni() {
+        return sc.nextInt();
+    }
+    
+    static long nl() {
+        return sc.nextLong();
+    }
+
+    static char[] nsToChars() {
+        return sc.next().toCharArray();
+    }
+}
+"
+18,"import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    String ans = """";
+    for (int i=0; i<s.length(); i += 2) {
+      char odd = s.charAt(i);
+      ans = ans + String.valueOf(odd);
+    }
+    System.out.println(ans);
+  }
+}"
+19,"import java.util.*;
+import java.io.*;
+
+public class Main {
+    
+    static int n;
+    static int[] a;
+    static int[] index;
+    static int[] dp;
+    static int[] times;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        n=Integer.parseInt(br.readLine());
+        a=new int[n-1];
+        index=new int[n];
+        dp=new int[n+1];
+        times=new int[n];
+        index[0]=1;
+        Arrays.fill(dp,-1);
+        int count=0;
+        for(int i=0;i<n-1;i++){
+            a[i]=Integer.parseInt(br.readLine());
+            times[a[i]-1]++;
+            index[i+1]=i+2;
+        }
+        int one=times[0];
+        //quick(times,0,n-1);
+        for(int i=0;i<n;i++){
+            if(times[i]==0){
+                count=Math.max(count,dfs(a[index[i]-2]));
+            }
+        }System.out.println(count+1);
+        //System.out.println(Arrays.toString(times)+""\n""+Arrays.toString(index));
+    }
+    
+    static int dfs(int target){
+        //System.out.println(""target=""+target);
+        if(dp[target]!=-1){ return dp[target]; }
+        if(target==1) return 0;
+        dp[target]=dfs(a[target-2])+times[target-1];
+        return dp[target];
+    }
+}"
+20,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+
+public class Main {
+	
+	public static void main(String[] args) throws IOException {
+		MyScanner sc = new MyScanner();
+		PrintWriter out = new PrintWriter(System.out);
+		int H = sc.nextInt();
+		int W = sc.nextInt();
+		char[][] grid = new char[H][];
+		for (int i = 0; i < grid.length; i++) {
+			grid[i] = sc.next().toCharArray();
+		}
+		short[][][][] max = new short[W][H][H][17];
+		int tmp;
+		for (int from2 = W-1; from2 >= 0; from2--) {
+			for (int from1 = 0; from1 < H; from1++) {
+				max[from2][from1][from1][0] = (short)(from2 + 1);
+				if (from2 + 1 < W && grid[from1][from2] == grid[from1][from2 + 1]) {
+					max[from2][from1][from1][0] = max[from2 + 1][from1][from1][0];
+				}
+			}
+			for (int from1 = 0; from1 < H; from1++) {
+				for (int to1 = from1 + 1; to1 < H; to1++) {
+					max[from2][from1][to1][0] = (short)from2;
+					if (grid[to1-1][from2] == grid[to1][from2]) {
+						max[from2][from1][to1][0] = (short)Math.min(max[from2][from1][to1-1][0], max[from2][to1][to1][0]);
+					}
+				}
+			}
+		}
+		for (int i = 1; i < 17; i++) {
+			for (int from2 = 0; from2 < W; from2++) {
+				for (int from1 = 0; from1 < H; from1++) {
+					int med = from1;
+					for (int to1 = from1; to1 < H; to1++) {
+						tmp = max[from2][from1][to1][i - 1];
+						max[from2][from1][to1][i] = tmp < W ? max[tmp][from1][to1][i - 1] : (short)W;
+						int cur = med + 1 <= to1 ? Math.min(max[from2][from1][med][i-1], max[from2][med+1][to1][i-1]) : -1, next;
+						while (med + 2 <= to1 && (next = Math.min(max[from2][from1][med+1][i-1], max[from2][med+2][to1][i-1])) >= cur) {
+							med++;
+							cur = next;
+						}
+						if (cur != -1) max[from2][from1][to1][i] = (short)Math.max(max[from2][from1][to1][i], cur);
+					}
+				}
+			}
+		}
+		int ans;
+		for (ans = 0; ans < 17; ans++) {
+			if (max[0][0][H-1][ans] >= W) break;
+		}
+		out.println(ans);
+		
+		out.flush();
+	}
+	
+	static int val(char c) {
+		return c == '#' ? 1 : 0;
+	}
+	
+	static class MyScanner {
+		private BufferedReader br;
+		private StringTokenizer tokenizer;
+		
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+		
+		public String next() {
+			while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+				try {
+					tokenizer = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+			}
+			return tokenizer.nextToken();
+		}
+		
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+		
+		public long nextLong() {
+			return Long.parseLong(next());
+		}
+	}
+}
+"
+21,"import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = sc.next();
+
+        int[] a = new int[n + 1];
+        int count = 0 ;
+        for (int i = 1 ; i < n + 1 ; i++) {
+            if (s.substring(i - 1, i).equals(""#"")) {
+                count++;
+            }
+            a[i] = count;
+        }
+
+        int min = 12345567;
+        for (int i = 0 ; i < n + 1 ; i++) {
+            int b = n - i - (a[n] - a[i]);
+            int w = a[i];
+            min = Math.min(min, b + w);
+        }
+
+        System.out.println(min);
+    }
+
+}
+"
+22,"import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+	    while (true) {
+		    String[] line = br.readLine().split("" "");
+
+		    int n = Integer.parseInt(line[0]);
+		    int x = Integer.parseInt(line[1]);
+
+		    if (n == 0 && x == 0) break;
+
+		    int resultCount = 0;
+		    for (int i = 1; i <= n; i++) {
+		    	for (int j = i + 1; j <= n; j++) {
+		    		for (int k = j + 1; k <= n; k++) {
+
+		    			if (i + j + k == x) {
+		    				resultCount++;
+		    			}
+		    		}
+		    	}
+		    }
+		    System.out.println(resultCount);
+	    }
+	}
+}"
+23,"import java.util.*;  
+
+public class Main {	
+    public static Long gcd(Long x,Long y){
+        if(x < y) return gcd(y, x);
+        if(y == 0) return x;
+        return gcd(y, x % y);
+    }
+    public static Long lcm(Long x,Long y){                                                              
+        return x*y/gcd(x,y);                                                                                                                                                                                                                
+    }
+    public static Long df1(Long x){                                                              
+        return x/5 + x/25 + x/125 + x/625 + x/3125 + x/15625;
+    }
+    public static Long df2(Long x){                     
+        return x/78125 + x/390625 + x/1953125 + x/9765625 + x/48828125 + x/244140625;
+    }
+    public static Long df3(Long x){                     
+        return x/1220703125 + x/6103515625 + x/30517578125 + x/152587890625 + x/762939453125 + x/3814697265625;
+    }
+    public static Long df4(Long x){                     
+        if((x+1)%2==0) return (x+1)%2; 
+        return df1(x/2)+df2(x/2)+df3(x/2);
+    }
+    public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		Long a = sc.nextLong();
+        Long b = df4(a);
+		System.out.println(b);   
+	}   
+}
+
+"
+1,"import java.util.*;
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		String input = s.nextLine();
+		Integer number = Integer.parseInt(input.split("" "")[0]);
+		Integer quantum = Integer.parseInt(input.split("" "")[1]);
+		Integer current_time = 0;
+		ArrayList<String> queue = new ArrayList<String>();
+		while(s.hasNext()){
+			queue.add(s.nextLine());
+		}
+		s.close();
+		String output = """";
+		while(queue.size() > 0){
+			String process = queue.remove(0);
+			Integer result = get_time(process, quantum);
+			if(result <= 0){
+				current_time = current_time + quantum + result;
+				output = output + process.split("" "")[0] + "" "" + current_time + ""\n"";
+			}
+			else{
+				current_time += quantum;
+				String process_result = process.split("" "")[0] + "" "" + result.toString();
+				queue.add(process_result);
+			}
+			if(output.length() > 5000){
+				System.out.print(output);
+				output = """";
+			}
+		}
+		System.out.print(output);
+
+	}
+	
+	private static Integer get_time(String process, Integer quantum){
+		Integer time = Integer.parseInt(process.split("" "")[1]);
+		return time - quantum;
+	}
+
+}"
+2,"import java.util.Scanner;
+
+public class Main {
+	public static int cnt = 0;
+	public static int m = 0;
+	public static int[] sortedArray = new int[100];
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		int num = scan.nextInt();
+		int[] array = new int[num];
+		for (int i = 0; i < num; i++) {
+			array[i] = scan.nextInt();
+		}
+		shellSort(array, num);
+
+		// output
+		System.out.println(m);
+		//shellsortでm-1から入力しているのでm-1から出力していく
+		System.out.print(sortedArray[m - 1]);
+		for (int i = m - 2; i >= 0; i--) {
+			System.out.print("" "" + sortedArray[i]);
+		}
+		System.out.println();
+		System.out.println(cnt);
+		for (int i = 0; i < num; i++) {
+			System.out.println(array[i]);
+		}
+		System.out.println();
+		
+		scan.close();
+
+	}
+
+	/**
+	 * 挿入ソート
+	 * 
+	 * @param sortArray：オリジンの配列
+	 * @param num：要素の個数
+	 * @param g: スタート位置
+	 */
+	public static void insertionSort(int[] sortArray, int num, int initialStatePoint) {
+
+		for (int i = initialStatePoint; i < num; i++) {
+			int v = sortArray[i]; // 1枚取り出す
+			int j = i - initialStatePoint;
+			while (j >= 0 && sortArray[j] > v) {// 取り出した一枚より前の方に持っていたカードと比較
+				sortArray[j + initialStatePoint] = sortArray[j];
+				j = j - initialStatePoint;
+				cnt++;
+			}
+			sortArray[j + initialStatePoint] = v;
+
+		}
+
+	}
+
+	/**
+	 * シェルソート
+	 * @param sortArray オリジンの配列
+	 * @param num：要素の個数
+	 */
+	public static void shellSort(int[] sortArray, int num) {
+		for (int i = 1;; i = i * 3 + 1) {
+			if (i > num) {
+				break;
+			}
+			sortedArray[m] = i;		
+			m++;
+		}
+		for (int i = m - 1; i >= 0; i--) {
+			insertionSort(sortArray, num, sortedArray[i]);
+		}
+	}
+
+}
+
+"
+3,"import java.io.BufferedReader;
+ import java.io.IOException;
+ import java.io.InputStreamReader;
+
+ public class Main {
+    public static void main(String[] args) {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        String s = """";
+
+        try {
+            s = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        long x = Long.parseLong(s);
+        long kaisu = 0;
+        long ten = 0;
+        int flg = 0;
+
+        while (ten < x){
+       if (flg == 0){
+       ten = ten + 6;
+       flg = 1;
+       } else {
+       ten = ten + 5;
+       flg = 0;
+       }
+       kaisu++;
+        }
+
+        System.out.println(kaisu);
+    }
+ }"
+4,"import java.util.Scanner;
+
+public class Main {
+	public static void main(String [] args) {
+		Scanner scan = new Scanner (System.in);
+		String word;
+		String str;
+		int m;
+		int h;
+		
+		while (true) {
+			
+			word = scan.next();
+			if (word.equals(""_"")) break;
+			
+			m = scan.nextInt();
+			
+			for (int i = 0; i < m; i++) {
+				h = scan.nextInt();
+				str = word + word;
+				int hh = h + word.length();
+				word = str.substring(h, hh);
+			}
+			
+			System.out.println(word);
+			
+		}
+		
+		scan.close();
+		
+	}
+}
+
+"
+5,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int result = -1;
+        for(int i = 1; i < ; i++) {
+            if((int)(i * 0.08) == a && (int)(i * 0.1) == b) {
+                result = (int) (b / 0.1);
+            }
+        }
+        System.out.println(result);
+    }
+}
+"
+6,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        System.out.println(""x"".repeat(input.length()));
+    }
+}"
+7,"import java.util.*;
+public class Main{
+ public static void main(String[] args){
+   Scanner sc = new Scanner(System.in);
+   int N = sc.nextInt();
+   int[] b = new int[N];
+   for(int i=0;i<N;i++) b[i] = sc.nextInt();
+   int ans = 0; 
+   boolean plus = true;
+   for(int i =0; i<N;i++)
+   {
+     plus = true;
+     for(int j =0;j<i;j++)
+     {
+       if(b[j]<b[i])
+       {
+         plus = false;
+         break;
+       }
+     }
+     if(plus) ans++;
+   }
+   System.out.println(ans);
+ }
+}"
+8,"package atcoder;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int total = 0;
+        int count = 0;
+        while (count<=2) {
+            if (a > b) {
+                total += a;
+                a--;
+                count++;
+            } else if (a < b) {
+                total += b;
+                b--;
+                count++;
+            } else if (a == b) {
+                total += a;
+                a--;
+                count++;
+            }
+        }
+        System.out.println(total);
+    }
+
+}"
+9,"import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+import java.util.function.LongSupplier;
+import java.util.function.ToLongFunction;
+
+public class Main{ // 
+	static class ConsoleScanner {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer("""");
+
+		String next() {
+			try {
+				while (!st.hasMoreElements())
+					st = new StringTokenizer(br.readLine());
+				return st.nextToken();
+			} catch (IOException e) {
+				throw new AssertionError(e);
+			}
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+	}
+
+	static LongSupplier now = new LongSupplier() {
+		private long t = System.currentTimeMillis();
+
+		@Override
+		public long getAsLong() {
+			long a = t;
+			t = System.currentTimeMillis();
+			long ans = t - a;
+			return ans;
+		}
+	};
+
+	public static void main(String args[]) {
+		ConsoleScanner cin = new ConsoleScanner();
+		PrintWriter cout = new PrintWriter(System.out);
+		solve(cin, cout);
+		cout.flush();
+	}
+
+	static int tr(Object... objects) {
+		System.out.println(""tr:"" + Arrays.deepToString(objects));
+		return 0;
+	}
+
+	private static void solve(ConsoleScanner cin, PrintWriter cout) {
+		// assert solve(1) == 1;
+
+		int n = cin.nextInt();
+		int m = cin.nextInt();
+		int r = cin.nextInt();
+
+		int[] s = new int[r];
+		for (int i = 0; i < s.length; i++)
+			s[i] = cin.nextInt() - 1;
+		long[][] dist = new long[n][n];
+		for (long[] d : dist)
+			Arrays.fill(d, Long.MAX_VALUE / 2);
+		for (int i = 0; i < n; i++)
+			dist[i][i] = 0;
+		for (int i = 0; i < m; i++) {
+			int a = cin.nextInt() - 1;
+			int b = cin.nextInt() - 1;
+			int c = cin.nextInt();
+			dist[a][b] = dist[b][a] = c;
+		}
+
+		now.getAsLong();
+
+		long ans = solve(n, r, s, dist);
+		cout.println(ans);
+
+		assert 0 == tr(""elapsed"", now.getAsLong());
+	}
+
+	private static long solve(int n, int r, int[] s, long[][] d) {
+
+		assert 0 == tr(d);
+		// Warshall–Floyd Algorithm
+		for (int k = 0; k < n; k++)
+			for (int i = 0; i < n; i++)
+				for (int j = 0; j < n; j++)
+					if (d[i][j] > d[i][k] + d[k][j])
+						d[i][j] = d[i][k] + d[k][j];
+
+		assert 0 == tr(d);
+		
+		// 2<=R<=min(8,N)
+		ToLongFunction<Integer> minimize = new ToLongFunction<Integer>() {
+			@Override
+			public long applyAsLong(Integer k) {
+				if (k == n - 1) {
+					// evaluate
+					long ans = 0;
+					for (int i = 1; i < r; i++)
+						ans += d[s[i - 1]][s[i]];
+					return ans;
+				}
+				// permutate
+				long ans = Long.MAX_VALUE;
+				for (int i = k; i < r; i++) {
+					int t = s[i];
+					s[i] = s[k];
+					s[k] = t;
+					long subans = this.applyAsLong(k + 1);
+					ans = Math.min(ans, subans);
+					t = s[i];
+					s[i] = s[k];
+					s[k] = t;
+				}
+				return ans;
+			}
+
+		};
+//		long ans = minimize.applyAsLong(0);
+//		return ans;
+		
+		long min = dfs(0, new boolean[r], s, d, -1);
+        return min;
+	}
+	
+	
+	 
+    private static long dfs(int index, boolean[] used, int[] r, long[][] distances, int from) {
+        if (index >= r.length) {
+            return 0;
+        }
+
+        long min = (int) 1e9;
+
+        for (int i = 0; i < r.length; i++) {
+            if (used[i]) {
+                continue;
+            }
+
+            used[i] = true;
+
+            int to = r[i];
+            long distance = (from == -1 ? 0 : distances[from][to]) + dfs(index + 1, used, r, distances, to);
+            if (distance < min) {
+                min = distance;
+            }
+
+            used[i] = false;
+
+        }
+
+        return min;
+    }
+
+}
+"
+10,"																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    long MOD = (long)Math.pow(10, 9) + 7;
+    long[] a = new long[n];
+    int zero = 0;
+    ArrayList<Long> list1 = new ArrayList<Long>();
+    ArrayList<Long> list2 = new ArrayList<Long>();
+    for(int i = 0; i < n; i++) {
+      a[i] = sc.nextLong();
+      if(a[i] >= 0) {
+        list1.add(a[i]);
+      } else {
+        list2.add(a[i]);
+      }
+      if(a[i] == 0) zero++;
+    }
+    Collections.sort(list1);
+    Collections.sort(list2);
+    long ans = 1;
+    if(list1.size() == 0) {
+      if((k % 2) == 1) {
+        for(int i = list2.size() - 1; i >= list2.size() - k; i--) {
+          long d = list2.get(i);
+          d += MOD;
+          ans = (ans * d) % MOD;
+        }
+      } else {
+        for(int i = 0; i < k; i++) {
+          long d = list2.get(i);
+          d += MOD;
+          ans = (ans * d) % MOD;
+        }
+      }
+    } else if(list2.size() == 0) {
+      for(int i = list1.size() - 1; i >= list1.size() - k; i--) {
+        ans = (ans * list1.get(i)) % MOD;
+      }
+    } else {
+      if(k == n) {
+        for(int i = 0; i < n; i++) {
+          if(a[i] >= 0) {
+            ans = (ans * a[i]) % MOD;
+          } else {
+            long d = a[i] + MOD;
+            ans = (ans * d) % MOD;
+          }
+        }
+      } else {
+        if((list1.size() + list2.size() - zero) > k) {
+          int p1 = list1.size() - 1;
+          int p2 = 0;
+          if((k % 2) == 0) {
+            for(int i = 0; i < k; i++) {
+              if(p1 >= 0) {
+                if(i == (k - 1)) {
+                  ans = (ans * list1.get(p1)) % MOD;
+                  p1--;
+                } else {
+                  if(p2 >= (list2.size() - 1)) {
+                    ans = (ans * list1.get(p1)) % MOD;
+                    p1--;
+                  } else {
+                    long t1 = list1.get(p1);
+                    if(p1 > 0) t1 *= list1.get(p1 - 1);
+                    long t2 = list2.get(p2) * list2.get(p2 + 1);
+                    if(t1 >= t2) {
+                      ans = (ans * list1.get(p1)) % MOD;
+                      p1--;
+                    } else {
+                      ans = (ans * (t2 % MOD)) % MOD;
+                      i++;
+                      p2 += 2;
+                    }
+                  }
+                }
+              } else {
+                long d = list2.get(p2) + MOD;
+                ans = (ans * d) % MOD;
+                p2++;
+              }
+            }
+          } else {
+            ans = list1.get(p1);
+            p1--;
+            for(int i = 1; i < k; i++) {
+              if(p1 >= 0) {
+                if(i == (k - 1)) {
+                  ans = (ans * list1.get(p1)) % MOD;
+                  p1--;
+                } else {
+                  if(p2 >= (list2.size() - 1)) {
+                    ans = (ans * list1.get(p1)) % MOD;
+                    p1--;
+                  } else {
+                    long t1 = list1.get(p1);
+                    if(p1 > 0) t1 *= list1.get(p1 - 1);
+                    long t2 = list2.get(p2) * list2.get(p2 + 1);
+                    if(t1 >= t2) {
+                      ans = (ans * list1.get(p1)) % MOD;
+                      p1--;
+                    } else {
+                      ans = (ans * (t2 % MOD)) % MOD;
+                      i++;
+                      p2 += 2;
+                    }
+                  }
+                }
+              } else {
+                long d = list2.get(p2) + MOD;
+                ans = (ans * d) % MOD;
+                p2++;
+              }
+            }
+          }
+        } else if((list1.size() + list2.size() - zero) == k) {
+          if((list2.size() % 2) == 0) {
+            for(int i = 0; i < list2.size(); i++) {
+              long d = list2.get(i) + MOD;
+              ans = (ans * d) % MOD;
+            }
+            for(int i = 0; i < list1.size(); i++) {
+              ans = (ans * list1.get(i)) % MOD;
+            }
+          } else {
+            if(zero > 0) {
+              ans = 0;
+            } else {
+              for(int i = 0; i < n; i++) {
+                if(a[i] >= 0) {
+                  ans = (ans * a[i]) % MOD;
+                } else {
+                  long d = a[i] + MOD;
+                  ans = (ans * d) % MOD;
+                }
+              }
+            }
+          }
+        } else {
+          ans = 0;
+        }
+      }
+    }
+    System.out.println(ans);
+  }
+}"
+11,"import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int x=scan.nextInt();
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        if (a>=b){
+            System.out.println(""delicious"");
+        }else if (b-a<=x){
+            System.out.println(""safe"");
+        }else {
+            System.out.println(""dangerous"");
+        }
+    }
+}
+"
+12,"package AtCoderBeginnerContest052;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class C2 {
+    // public class Main {
+
+    static void solve() {
+        int n = nextInt();
+
+        // map: 数値 -> (素因数)
+        // ex)
+        // 2 -> (2)
+        // 4 -> (2,2)
+        // 12 -> (2,2,3)
+        Map<Integer, List<Integer>> map = primeFactorizeTo(n);
+
+        Map<Integer, Integer> allFactors = new HashMap<>();
+        for (List<Integer> ll : map.values()) {
+            for (Integer i : ll) {
+                if (!allFactors.containsKey(i))
+                    allFactors.put(i, 0);
+                allFactors.put(i, allFactors.get(i) + 1);
+            }
+        }
+//        System.out.println(allFactors);
+
+        long ans = 1;
+        for (Integer i : allFactors.values()) {
+            ans = ans * (i + 1) % MOD;
+        }
+
+        out.println(ans);
+    }
+
+    static final int MOD = 1_000_000_007;
+    static long[] fac, finv, inv;
+
+    // map: 数値 -> (素因数)
+    // ex)
+    // 2 -> (2)
+    // 4 -> (2,2)
+    // 12 -> (2,2,3)
+    static Map<Integer, List<Integer>> primeFactorizeTo(int n) {
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        for (int i = 2; i <= n; i++) {
+            List<Integer> list = new ArrayList<>();
+            int tmp = i;
+            for (int j = i - 1; j > 1; j--) {
+                if (tmp % j == 0) {
+                    if (map.containsKey(j)) {
+                        list.addAll(map.get(j));
+                    } else {
+                        list.add(j);
+                    }
+                    tmp /= j;
+                }
+            }
+            if (tmp != 1)
+                list.add(tmp);
+            map.put(i, list);
+        }
+        return map;
+    }
+
+    // 階乗(n!)
+    static long factorial(long n) {
+        long ans = 1;
+        for (long i = n; i > 0; i--) {
+            ans = ans * i % MOD;
+        }
+        return ans;
+    }
+
+    // nCkの初期化
+    static void comInit(int max) {
+        fac = new long[max];
+        finv = new long[max];
+        inv = new long[max];
+        fac[0] = fac[1] = 1;
+        finv[0] = finv[1] = 1;
+        inv[1] = 1;
+
+        for (int i = 2; i < max; i++) {
+            fac[i] = fac[i - 1] * i % MOD;
+            inv[i] = MOD - inv[MOD % i] * (MOD / i) % MOD;
+            finv[i] = finv[i - 1] * inv[i] % MOD;
+        }
+    }
+
+    // nCkの計算
+    static long com(int n, int k) {
+        if (n < k)
+            return 0;
+        if (n < 0 || k < 0)
+            return 0;
+        return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD;
+    }
+
+    static PrintWriter out;
+    static Scanner sc;
+
+    static int[][] newIntArray(int h, int w, int value) {
+        int[][] ret = new int[h][w];
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                ret[i][j] = value;
+            }
+        }
+        return ret;
+    }
+
+    static int nextInt() {
+        return Integer.parseInt(sc.next());
+    }
+
+    static long nextLong() {
+        return Long.parseLong(sc.next());
+    }
+
+    static String nextString() {
+        return sc.next();
+    }
+
+    static int[] nextIntArray(int n) {
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = nextInt();
+        }
+        return a;
+    }
+
+    static long[] nextLongArray(int n) {
+        long[] a = new long[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = nextLong();
+        }
+        return a;
+    }
+
+    static List<Integer> nextIntList(int n) {
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(nextInt());
+        }
+        return list;
+    }
+
+    static List<Double> nextDoubleList(int n) {
+        List<Double> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add((double) nextInt());
+        }
+        return list;
+    }
+
+    static List<Long> nextLongList(int n) {
+        List<Long> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(nextLong());
+        }
+        return list;
+    }
+
+    static char[][] nextCharArray(int h, int w) {
+        char[][] c = new char[h][w];
+        for (int i = 0; i < h; i++) {
+            String str = nextString();
+            for (int j = 0; j < w; j++) {
+                c[i][j] = str.charAt(j);
+            }
+        }
+        return c;
+    }
+
+    static <T extends Comparable<? super T>> void sort(List<T> list) {
+        Collections.sort(list);
+    }
+
+    // greatest common divisor
+    // 最大公約数
+    static long gcd(long a, long b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+
+    // least common multiple
+    // 最小公倍数
+    static long lcm(long a, long b) {
+        if (a >= b && a % b == 0)
+            return a;
+        if (b > a && b % a == 0)
+            return b;
+
+        if (a > b) {
+            return (a / gcd(a, b)) * b;
+        } else {
+            return (b / gcd(a, b)) * a;
+        }
+        // return a * b / gcd(a, b);
+    }
+
+    // baseのn乗を計算を返す
+    static int pow(int base, int n) {
+        int ret = 1;
+        for (int i = 0; i < n; i++) {
+            ret *= base;
+        }
+        return ret;
+    }
+
+    // return n^k mod m
+    static long powMod(long n, long k, long m) {
+        if (k == 0) {
+            return 1;
+        } else if (k % 2 == 1) {
+            return powMod(n, k - 1, m) * n % m;
+        } else {
+            long tmp = powMod(n, k / 2, m);
+            return tmp * tmp % m;
+        }
+    }
+
+    // intをlength桁のbit文字列に変換
+    static String toBitString(int length, int n) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = length - 1; i >= 0; i--) {
+            if ((n >> i) % 2 == 1) {
+                sb.append(""1"");
+            } else {
+                sb.append(""0"");
+            }
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        out = new PrintWriter(System.out);
+        sc = new Scanner(System.in);
+
+        solve();
+
+        out.flush();
+        sc.close();
+    }
+
+}
+"
+13,"import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main{
+    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            long n = Long.parseLong(br.readLine());
+            printFactor(n);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void printFactor(long n){
+        System.out.print(n + "":"");
+        factorize(n);
+    }
+    private static void factorize(long n){
+        if (n==1){
+            System.out.println();
+            return;
+        }
+        System.out.print("" "");
+        if(n%2==0){
+            System.out.print(2);
+            n = n/(long)2;
+        }else{
+            for (int i = 3; i <= n ; i+=2) {
+                if(n%i==0){
+                    System.out.print(i);
+                    n = n/(long)i;
+                    break;
+                }
+            }
+        }
+
+        factorize(n);
+    }
+}"
+14,"import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args){
+    Scanner nyuryoku = new Scanner(System.in);
+    int n = nyuryoku.nextInt();
+    int[] num = new int[n];
+    for (int i = 0; i < n; i++){
+      num[i] = nyuryoku.nextInt();
+    }
+    int ans = prime(n, num);
+    System.out.println(ans);
+  }
+  public static int prime(int n, int[] num){
+    int count = 0;
+    IN:for (int i = 0; i < n; i++){
+      for (int j = 2; j < num[i];j++)
+        if (num[i] % j == 0) {continue IN;}
+    count++;
+    }
+    return count;
+  }
+}
+
+"
+15,"import java.util.*;
+
+class Main {
+    static String[] strs = {
+        ""dream"",
+        ""dreamer"",
+        ""erase"",
+        ""eraser""
+    };
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String S = sc.next();
+
+        int index = S.length();
+        while (true) {
+            boolean endsWithStr = false;
+            for (String str: strs) {
+                if (S.substring(0, index).endsWith(str)) {
+                    endsWithStr = true;
+                    index -= str.length();
+                    break;
+                }
+            }
+            if (!endsWithStr) {
+                System.out.println(""NO"");
+                break;
+            }
+            if (index == 0) {
+                System.out.println(""YES"");
+                break;
+            }
+        }
+    }
+}
+"

@@ -1,0 +1,1042 @@
+
+Processing case 1 - 2.json - s095898253
+Actual verdict: Compile Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 2 - 4.json - s298178270
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 3 - 4.json - s292858230
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 4 - 6.json - s468014834
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 5 - 26.json - s123942897
+Actual verdict: Compile Error
+Predicted verdict: Compile Error
+Line number: 30
+
+Processing case 6 - 21.json - s260056906
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 7 - 23.json - s398176647
+Actual verdict: Accepted
+Predicted verdict: Runtime Error
+Line number: 12
+
+Processing case 8 - 23.json - s184330307
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 9 - 25.json - s404626599
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 10 - 23.json - s537435063
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 11 - 16.json - s689502184
+Actual verdict: Compile Error
+Predicted verdict: Compile Error
+Line number: 8
+
+Processing case 12 - 15.json - s358651561
+Actual verdict: Runtime Error
+Predicted verdict: Memory Limit Exceeded
+Line number: 22
+
+Processing case 13 - 24.json - s521454178
+Actual verdict: Runtime Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 14 - 7.json - s848944916
+Actual verdict: Runtime Error
+Predicted verdict: Runtime Error
+Line number: 18
+
+Processing case 15 - 4.json - s219225673
+Actual verdict: Runtime Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 16 - 2.json - s288313730
+Actual verdict: Memory Limit Exceeded
+Error during API call: Expecting value: line 639 column 1 (char 3509)
+Failed to get response from OPENAI
+
+Processing case 17 - 9.json - s203479105
+Actual verdict: Compile Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 18 - 10.json - s287645428
+Actual verdict: Accepted
+Predicted verdict: Runtime Error
+Line number: 30
+
+Processing case 19 - 12.json - s259752849
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Runtime Error
+Line number: 19
+
+Processing case 20 - 20.json - s760072563
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 21 - 22.json - s590534772
+Actual verdict: Time Limit Exceeded
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Runtime Error"
+    "line_number":"17"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 22 - 24.json - s335220054
+Actual verdict: Runtime Error
+Predicted verdict: Runtime Error
+Line number: 38
+
+Processing case 23 - 17.json - s504940020
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 24 - 19.json - s988836345
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 25 - 24.json - s102394128
+Actual verdict: Time Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 26 - 12.json - s225336052
+Actual verdict: Runtime Error
+Error during API call: Expecting value: line 605 column 1 (char 3322)
+Failed to get response from OPENAI
+
+Processing case 27 - 11.json - s192393912
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"9"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 28 - 5.json - s884370330
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"3"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 29 - 25.json - s076436049
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 30 - 21.json - s393262537
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Memory Limit Exceeded
+Line number: 0
+
+Processing case 31 - 14.json - s613276952
+Actual verdict: Compile Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 32 - 3.json - s869336585
+Actual verdict: Time Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 33 - 12.json - s363197110
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"29"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 34 - 4.json - s340097846
+Actual verdict: Time Limit Exceeded
+Predicted verdict: Time Limit Exceeded
+Line number: 0
+
+Processing case 35 - 14.json - s044348465
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"1"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 36 - 21.json - s173243686
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 37 - 12.json - s118466683
+Actual verdict: Compile Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 38 - 6.json - s648311219
+Actual verdict: Accepted
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 39 - 24.json - s960918097
+Actual verdict: Runtime Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 40 - 26.json - s376839194
+Actual verdict: Compile Error
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 41 - 7.json - s820125147
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"19"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 42 - 19.json - s385930750
+Actual verdict: Runtime Error
+Predicted verdict: Time Limit Exceeded
+Line number: 0
+
+Processing case 43 - 0.json - s551551910
+Actual verdict: Memory Limit Exceeded
+Error during API call: Expecting value: line 437 column 1 (char 2398)
+Failed to get response from OPENAI
+
+Processing case 44 - 21.json - s514287681
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Time Limit Exceeded
+Line number: 0
+
+Processing case 45 - 7.json - s903142473
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"11"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 46 - 2.json - s328413599
+Actual verdict: Time Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 47 - 16.json - s622583827
+Actual verdict: Runtime Error
+Predicted verdict: Runtime Error
+Line number: 14
+
+Processing case 48 - 23.json - s581510829
+Actual verdict: Memory Limit Exceeded
+Predicted verdict: Accepted
+Line number: 0
+
+Processing case 49 - 15.json - s137549674
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 50 - 12.json - s491674916
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 51 - 11.json - s064277881
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 52 - 7.json - s190029517
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 53 - 21.json - s649574690
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 54 - 26.json - s951760235
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 55 - 0.json - s816863764
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 56 - 7.json - s945234480
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111480000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 57 - 4.json - s582698565
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 58 - 9.json - s758248440
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 59 - 17.json - s800852517
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 60 - 4.json - s020456768
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 61 - 24.json - s751982351
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 62 - 4.json - s379388061
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 63 - 16.json - s991118478
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 64 - 17.json - s936492471
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111540000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 65 - 16.json - s094620783
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111540000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 66 - 9.json - s576264884
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 67 - 7.json - s029289023
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 68 - 3.json - s994373776
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 69 - 21.json - s487054883
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 70 - 25.json - s260609586
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 71 - 18.json - s283077784
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 72 - 1.json - s325313723
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 73 - 22.json - s363762529
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111600000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 74 - 2.json - s805656628
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 75 - 15.json - s750254444
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 76 - 12.json - s908887743
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 77 - 27.json - s094204144
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 78 - 16.json - s047642320
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 79 - 5.json - s414174734
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 80 - 19.json - s410104922
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 81 - 15.json - s108483899
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111660000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 82 - 21.json - s984360969
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111660000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 83 - 11.json - s631843749
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 84 - 9.json - s891514086
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 85 - 18.json - s050070107
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 86 - 25.json - s532652833
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 87 - 8.json - s235175073
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 88 - 21.json - s543932179
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 89 - 13.json - s488933489
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111720000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 90 - 2.json - s566747058
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 91 - 2.json - s237681844
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 92 - 9.json - s541047682
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 93 - 24.json - s095991542
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 94 - 22.json - s313422557
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 95 - 20.json - s963426913
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 96 - 25.json - s851881735
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 97 - 7.json - s776349753
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111780000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 98 - 10.json - s881010288
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111780000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 99 - 16.json - s353273077
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 100 - 7.json - s579790957
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 101 - 2.json - s804314319
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 102 - 26.json - s421882848
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 103 - 6.json - s825762824
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 104 - 0.json - s779691636
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 105 - 17.json - s222187040
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111840000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 106 - 17.json - s371936240
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111840000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 107 - 22.json - s730081126
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 108 - 6.json - s071788098
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 109 - 20.json - s156374018
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 110 - 19.json - s285329111
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 111 - 13.json - s896383504
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 112 - 0.json - s088668124
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 113 - 2.json - s815461204
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 114 - 18.json - s342764907
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752111900000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 115 - 20.json - s080756282
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 116 - 18.json - s232222427
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 117 - 19.json - s811236857
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 118 - 10.json - s971788360
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 119 - 9.json - s178202440
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 120 - 18.json - s412047269
+Actual verdict: Compile Error
+Failed to parse OPENAI response: name 're' is not defined
+Original response: {
+    "verdict":"Compile Error"
+    "line_number":"10"
+}
+Predicted verdict: 
+Line number: 0
+
+Processing case 121 - 19.json - s926183581
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 122 - 13.json - s286323622
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 123 - 1.json - s059344477
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 124 - 0.json - s983915597
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 125 - 23.json - s277402019
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 126 - 11.json - s118949501
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 127 - 8.json - s523588991
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 128 - 12.json - s408298637
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 129 - 15.json - s855701195
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112020000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 130 - 9.json - s028688788
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 131 - 12.json - s775517848
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 132 - 7.json - s609467867
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 133 - 14.json - s875407876
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 134 - 13.json - s170698741
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 135 - 24.json - s293612228
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 136 - 8.json - s211792182
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 137 - 20.json - s294562458
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112080000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 138 - 6.json - s248977659
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 139 - 9.json - s922597724
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 140 - 1.json - s354057134
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 141 - 2.json - s749471931
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 142 - 27.json - s221948545
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 143 - 22.json - s733676174
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 144 - 20.json - s685825648
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 145 - 20.json - s568717911
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112140000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 146 - 16.json - s203861675
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112140000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 147 - 5.json - s039577016
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 148 - 4.json - s031884534
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 149 - 24.json - s704017656
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 150 - 20.json - s508209620
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 151 - 6.json - s679751479
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 152 - 6.json - s990846439
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 153 - 0.json - s620146757
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112200000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 154 - 25.json - s693260717
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112200000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 155 - 26.json - s408888411
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 156 - 23.json - s299708542
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 157 - 2.json - s482624966
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 158 - 11.json - s580856028
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 159 - 14.json - s122937785
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 160 - 1.json - s684715990
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 161 - 11.json - s450223937
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112260000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 162 - 3.json - s418620871
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112260000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 163 - 11.json - s856280086
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 164 - 13.json - s944898354
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 165 - 12.json - s789795829
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 166 - 20.json - s751485515
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 167 - 17.json - s693263035
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 168 - 22.json - s285875691
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 169 - 8.json - s017413666
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 170 - 5.json - s311257376
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112320000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 171 - 21.json - s122880738
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 172 - 20.json - s102048443
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 173 - 4.json - s268210906
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 174 - 20.json - s212940771
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 175 - 8.json - s285970491
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 176 - 4.json - s150501225
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 177 - 6.json - s781144516
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 178 - 1.json - s909524233
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112380000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 179 - 14.json - s009071477
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112380000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 180 - 22.json - s891307178
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 181 - 2.json - s372939522
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 182 - 2.json - s847921031
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 183 - 13.json - s177218728
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 184 - 21.json - s903528666
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 185 - 27.json - s662156866
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 186 - 26.json - s948786278
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112440000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 187 - 12.json - s085379849
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112440000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 188 - 11.json - s320627001
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 189 - 10.json - s730885324
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 190 - 2.json - s360761344
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 191 - 11.json - s238236661
+Actual verdict: Runtime Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 192 - 10.json - s656338947
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 193 - 20.json - s393710113
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 194 - 12.json - s186604011
+Actual verdict: Memory Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 195 - 2.json - s763057908
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-min. ', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752112500000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 196 - 25.json - s930748882
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 197 - 17.json - s917752495
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 198 - 11.json - s047405476
+Actual verdict: Accepted
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 199 - 17.json - s826751803
+Actual verdict: Compile Error
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+
+Processing case 200 - 10.json - s270936087
+Actual verdict: Time Limit Exceeded
+Error during API call: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752192000000'}, 'provider_name': None}}, 'user_id': 'user_2zV8ra7ZUGAtT4APx45CYFMkLDi'}
+Failed to get response from OPENAI
+Accuracy:  7.5
+Processing completed. Results saved to result.csv
