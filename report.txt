@@ -1,0 +1,286 @@
+4-1
+====
+
+Week 3
+---------
+
+Papers:
+    1. A Critical Review of Large Language Model on Software
+    2. A Deep Dive into Large Language Models for Automated Bug
+    3. Parameter_Efficient_Multi_classification_Software_Defect_Detection
+
+Week 4-6
+---------
+
+Papers:
+    1. An Empirical Study on Learning Bug-Fixing Patches in the Wild via Neural Machine Translation
+    2. CodeBERT: A Pre-Trained Model for Programming and Natural Languages
+    3. The CodRep Machine Learning on Source Code Competition
+    4. Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks
+        => A general graph neural network based model for graph-level classification through learning on a rich set of code semantic representations. It includes a novel Conv module to efficiently extract useful features in the learned rich node representations for graph-level classification.
+    5. SEQUENCER: Sequence-to-Sequence Learning for End-to-End Program Repair
+
+Datasets:
+    1. CodeXGLUE -- Defect Detection
+        => Given a source code, the task is to identify whether it is an insecure code that may attack software systems, such as resource leaks, use-after-free vulnerabilities and DoS attack. We treat the task as binary classification (0/1), where 1 stands for insecure code and 0 for secure code. The dataset we use comes from the paper [*Devign*: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks](http://papers.nips.cc/paper/9209-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks.pdf). The dataset were splitted 80%/10%/10% for training/dev/test. After training CodeBERT predicted with 62% accuracy.
+
+        example:
+
+        ```
+        // "project": "qemu"
+        // "commit_id": "76349f5ba8f4e2f0b8c93c12ec0950a8bc77408a"
+        // "target": 1
+        /*"func" : "*/
+        void restore_boot_order(void *opaque)
+
+        {
+
+            char *normal_boot_order = opaque;
+
+            static int first = 1;
+
+
+
+            /* Restore boot order and remove ourselves after the first boot */
+
+            if (first) {
+
+                first = 0;
+
+                return;
+
+            }
+
+
+
+            qemu_boot_set(normal_boot_order, NULL);
+
+
+
+            qemu_unregister_reset(restore_boot_order, normal_boot_order);
+
+            g_free(normal_boot_order);
+
+        }
+        ```
+
+        LLMs can't find any error here. Too hard to find any defects. Full code/context isn't available.
+
+Week 7
+-------
+Dataset: 
+    1. CODREP  
+        => CodRep is a machine learning competition on source code data. It provides the community with a curated dataset and a well-defined loss function.
+        => a "fixed" line and a buggy code is given. LLM has to predict the line number of the buggy code which will be replaced by the given fixed line. This dataset isn't compatible with our thesis.
+
+        Example:
+
+        # Dataset 1
+
+        ## case 3
+
+        ### Problem
+
+        Line to be added:
+
+        ```java
+            assertEquals(similar[1], "oneword");
+        ```
+
+        Source Code:
+
+        ```java
+        1 | package org.apache.lucene.search.spell;
+        2 | 
+        3 | /**
+        4 |  * Licensed to the Apache Software Foundation (ASF) under one or more
+        5 |  * contributor license agreements.  See the NOTICE file distributed with
+        6 |  * this work for additional information regarding copyright ownership.
+        7 |  * The ASF licenses this file to You under the Apache License, Version 2.0
+        8 |  * (the "License"); you may not use this file except in compliance with
+        9 |  * the License.  You may obtain a copy of the License at
+        10 |  *
+        11 |  *     http://www.apache.org/licenses/LICENSE-2.0
+        12 |  *
+        13 |  * Unless required by applicable law or agreed to in writing, software
+        14 |  * distributed under the License is distributed on an "AS IS" BASIS,
+        15 |  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        16 |  * See the License for the specific language governing permissions and
+        17 |  * limitations under the License.
+        18 |  */
+        19 | 
+        20 | import java.io.IOException;
+        21 | import java.io.StringReader;
+        22 | 
+        23 | import org.apache.lucene.store.Directory;
+        24 | import org.apache.lucene.util.LuceneTestCase;
+        25 | 
+        26 | /**
+        27 |  * Test case for PlainTextDictionary
+        28 |  *
+        29 |  */
+        30 | public class TestPlainTextDictionary extends LuceneTestCase {
+        31 | 
+        32 |   public void testBuild() throws IOException {
+        33 |     final String LF = System.getProperty("line.separator");
+        34 |     String input = "oneword" + LF + "twoword" + LF + "threeword";
+        35 |     PlainTextDictionary ptd = new PlainTextDictionary(new StringReader(input));
+        36 |     Directory ramDir = newDirectory();
+        37 |     SpellChecker spellChecker = new SpellChecker(ramDir);
+        38 |     spellChecker.indexDictionary(ptd);
+        39 |     String[] similar = spellChecker.suggestSimilar("treeword", 2);
+        40 |     assertEquals(2, similar.length);
+        41 |     assertEquals(similar[0], "threeword");
+        42 |     assertEquals(similar[1], "twoword");
+        43 |     spellChecker.close();
+        44 |     ramDir.close();
+        45 |   }
+        46 | 
+        47 | }
+        ```
+
+        ### Solution
+
+        Replace line number:
+
+        ```java
+        42
+        ```
+
+    2. pytracebugs Dataset => Rayan
+
+Week 8-11
+-----------
+
+Papers:
+    1. A Critical Review of Large Language Model on Software Engineering: An Example from ChatGPT and Automated Program Repair
+        => LLM was used to repair buggy programs from Competitive Programming Datasets.
+        => Dataset: EvalGPTFix
+        => Base Model: gpt-3.5-turbo released by OpenAI
+
+    2. Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks
+        => A general graph neural network based model for graph-level classification through learning on a rich set of code semantic representations. It includes a novel Conv module to efficiently extract useful features in the learned rich node representations for graph-level classification.
+
+Datasets:
+    1. EvalGPTFix
+    2. Fixeval
+    3. PyBugHive
+    4. Defect-Detection (https://huggingface.co/datasets/mcanoglu/defect-detection)
+        => a dataset to train a model using examples of "safe" and "vulnerable" codes to identify security threats.
+    5. Bugs-dot-jar
+
+
+Week 12
+---------
+
+Papers:
+    1. LLM-SR: SCIENTIFIC EQUATION DISCOVERY VIA PROGRAMMING WITH LARGE LANGUAGE MODELS
+    2. MapCoder: Multi-Agent Code Generation for Competitive Problem Solving
+        => A Multi-Agent Prompting Based Code Generation approach that can seamlessly synthesize solutions for competition-level programming problems. Uses a multi-step pipeline to generate solution for Competitive Programming Problems using LLMs.
+        => Consists of: i.      Retrival Agent
+                        ii.     Planning Agent
+                        iii.    Coding Agent
+                        iv.     Debugging Agent
+    3. RM-BENCH : BENCHMARKING REWARD MODELS OF LANGUAGE MODELS WITH SUBTLETY AND STYLE
+    4. CODESIM: Multi-Agent Code Generation and Problem Solving through Simulation-Driven Planning and Debugging
+    5. LELANTE: LEveraging LLM for Automated ANdroid TEsting
+    6. MMQA: EVALUATING LLMS WITH MULTI-TABLE MULTI-HOP COMPLEX QUESTIONS
+
+
+
+Week 13-14 & afterwards
+--------------------------
+
+Prompting Codes, results: https://github.com/TH-014/Fixeval-Analysis.git
+
+Fixeval Dataset Analysis:
+=================================
+
+1. Single shot prompting:
+
+2. Few Shot prompting:
+..............................
+
+Prompt: 
+    """
+    Read the above code_tokens and predict the verdict of the code.
+    The verdict will be one of the following:
+    ["Accepted", "Compile Error", "Memory Limit Exceeded", "Runtime Error", "Time Limit Exceeded"]
+
+    You can assume default memory limit as 512 mb and default time limit as 1s.
+    To determine if it is time/memory limit exceeded ot not, at first determine the time/space complexity of the code and determine the verdict accordingly.
+    A few examples is given below:
+
+    {
+        "code_tokens": "import java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.util.ArrayDeque;\n\npublic class Main {\n\n\tpublic static void main(String[] args) throws IOException {\n\t\tBufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\t\tString line = \"\";\n\n\t\twhile ((line = br.readLine()) != null && !line.isEmpty()) {\n\t\t\tint n = Integer.parseInt(line);\n\t\t\tif (n == 0) {\n\t\t\t\tbreak;\n\t\t\t}\n\n\t\t\tlong count = 0;\n\t\t\tArrayDeque<Integer> queue = new ArrayDeque<Integer>();\n\t\t\tqueue.offer(n - 1);\n\t\t\tqueue.offer(n - 2);\n\t\t\tqueue.offer(n - 3);\n\n\t\t\twhile (queue.size() > 0) {\n\t\t\t\tInteger step = queue.poll();\n\t\t\t\tif (step == 0) {\n\t\t\t\t\tcount++;\n\t\t\t\t} else if (step > 0) {\n\t\t\t\t\tqueue.offer(step - 1);\n\t\t\t\t\tqueue.offer(step - 2);\n\t\t\t\t\tqueue.offer(step - 3);\n\t\t\t\t}\n\t\t\t}\n\t\t\tSystem.out.println(count % 3650 == 0 ? count / 3650 : count / 3650 + 1);\n\t\t}\n\t}\n}",
+        "verdict": "Memory Limit Exceeded"
+    }
+
+    {
+        "code_tokens": "import java.util.Scanner;\n\nclass Main{\n\tpublic static void main(String args[]){\n\t\tScanner scanner = new Scanner(System.in);\n\n\t\t\tString str = new String();\n\t\t\twhile((str = scanner.next()) != null){\n\t\t\t\tint n = Integer.parseInt(str);\n\t\t\t\tif(n == 0) return;\n\n\t\t\t\tfor(int i = 0; i < n; i++){\n\t\t\t\t\tscanner.next();\n\t\t\t\t}\n\n\t\t\t}\n\t}\n}",
+        "verdict": "Memory Limit Exceeded"
+    }
+
+    {
+        "code_tokens": "import java.io.*;\nclass Xcubic {\n\tstatic void main(String[] args) {\n\t\tBufferedReader reader = new BufferedReader(new InputStreamReader(System.in));\n        try {\n        \tString line = reader.readLine();\n        \tint x = Integer.parseInt(line);\n        \tint y = (x * x * x);\n        \tif (x >= 2 && x <= 100) {\n        \t\tSystem.out.println(y);\n        \t} else {\n        \t\tSystem.out.println(\"error:number is 1 to 100\");\n        \t}\n        } catch (IOException e) {\n          System.out.println(e);\n        } \n      }\n    }",
+        "verdict": "Runtime Error"
+    }
+
+    {
+        "code_tokens": "class Main{static{int i,j;for(i=1;i<10;i++)for(j=1;j<10;)System.out.println(i+\"x\"+j+\"=\"+i*j++);}}",
+        "verdict": "Runtime Error"
+    }
+
+    {
+        "code_tokens": "import java.util.HashMap;\nimport java.util.Scanner;\n\nclass Main{\n\n\tstatic Scanner scanner = new Scanner(System.in);\n\tstatic HashMap<Integer, Integer> map;\n\n\tpublic static void main(String args[]){\n\n\t\twhile(true){\n\t\t\tint n = scanner.nextInt();\n\t\t\tmap = new HashMap<Integer, Integer>();\n\t\t\tif(n == 0) break;\n\t\t\tsolve(n);\n\t\t\tSystem.gc();\n\t\t}\n\t}\n\n\tstatic void solve(int n){\n\t\tfor(int i = 0; i < n; i++){\n\t\t\tscanner.next();\n\t\t\tif(i % 100 == 99) System.gc();\n\t\t}\n\t}\n}",
+        "verdict": "Time Limit Exceeded"
+    }
+
+    {
+        "code_tokens": "import java.util.Scanner;\n\npublic class Main {\n\tstatic long sum;\n\n\tpublic static void main(String[] args) throws Exception {\n\t\tScanner sc = new Scanner(System.in);\n\t\twhile (true) {\n\t\t\tint n = sc.nextInt();\n\t\t\tif (n == 0)\n\t\t\t\tbreak;\n\t\t\tsum = 0;\n\t\t\tsolve(n);\n\t\t\tSystem.out.println((sum / 10 + 1) / 365 + 1);\n\t\t}\n\t}\n\n\tpublic static void solve(int n) {\n\t\tif (n < 0)\n\t\t\treturn;\n\t\tif (n == 0) {\n\t\t\tsum += 1;\n\t\t\treturn;\n\t\t}\n\t\tfor (int i = 1; i <= 3; i++) {\n\t\t\tsolve(n - i);\n\t\t}\n\t}\n}",
+        "verdict": "Time Limit Exceeded"
+    }
+
+    If you can find any error in a line mention the line number (mention 0 if no error is found).
+
+    YOUR RESPONSE MUST BE OF THE FOLLOWING FORM:
+    {
+        "verdict":"Accepted"
+        "line_number":"0"
+    } 
+    or
+    {
+        "verdict":"Compile Error"
+        "line_number":"12"
+    } 
+
+    NO FURTHER EXPLANATION IS NEEDED.
+    """
+
+    Result:
+    Total Accuracy: 38.83%
+
+    | verdict               | accuracy   |   total |
+    |:----------------------|:-----------|--------:|
+    | Accepted              | 61.11%     |      18 |
+    | Compile Error         | 29.41%     |      17 |
+    | Memory Limit Exceeded | 10.00%     |      20 |
+    | Runtime Error         | 31.58%     |      19 |
+    | Time Limit Exceeded   | 76.19%     |      21 |
+
+
+3. Multi-Agent Bugfinder:
+...........................
+
+Result: 
+
+| verdict               | accuracy   |   false positives |   false negatives |   total |
+|:----------------------|:-----------|------------------:|------------------:|--------:|
+| Accepted              | 57.14%     |                28 |                 3 |       7 |
+| Compile Error         | 45.45%     |                 3 |                 6 |      11 |
+| Memory Limit Exceeded | 0.00%      |                 0 |                11 |      11 |
+| Runtime Error         | 14.29%     |                 4 |                 6 |       7 |
+| Time Limit Exceeded   | 7.69%      |                 0 |                12 |      13 |
+
+
+Analysis report containing prompts and responses is given below.
